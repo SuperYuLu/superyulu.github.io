@@ -1,0 +1,46 @@
+body{
+    background: rgba(113,165,217,0.6);
+    width: 1900px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    text-indent: none;
+}
+
+header{
+    width: 350 px;
+    font-size:40px;
+    color: darkblue;
+    line-height: 1.2;
+    text-shadow: 5px 5px 10px yellow;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h1{
+    font-style: italic;
+    color: brown;
+    font-weight: bord;
+    font-variant: small-caps;
+    line-height: 1.2;
+    text-decoration: underline;
+}
+
+.intro{
+    text-shadow: 2px 5px 10px grey;
+}
+
+/*
+.HomepageName{color:blue;
+		background: lightblue;
+		
+	       }
+.HomepageName:hover{color:red;
+
+		    background: green;}
+*/
+
