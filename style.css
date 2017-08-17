@@ -44,8 +44,11 @@ h1:hover{
 
 .intro{
     
-    text-shadow: 2px 5px 10px grey;
-    background-image: linear-gradient(lightblue, lightgreen);
+    text-shadow: 1px 1px 0px yellow;
+    %background-image: linear-gradient(lightblue, lightgreen);
+    background: black;
+    color: white;
+	       
     font-size: 25px;
     font-family: Arial, sans-serif;
     line-height: 1.5;
@@ -56,11 +59,16 @@ h1:hover{
     width: 40%;
     padding: 10px 40px 10px 40px;
     
+    
 }
 
 .intro:hover{
-    background-image: linear-gradient(pink, orange);
+    %background-image: linear-gradient(pink, orange);
+    background: lightblue;
+    color: darkgreen;
 }
+
+.intro{transition-duration: 2s;}
 
 .title{
     font-family: monospace;
@@ -81,11 +89,21 @@ h1:hover{
     font-size: 20px;
     color: white;
     text-align: left;
-    background-color: black;
-    display: inline;
-    
+    background-image: linear-gradient(purple, blue);
+    display: inline;;
     
 }
+
+@keyframes around2{
+    0% {left: 0; top: 0;}
+    25% {left: 1200px; top: 0;}
+    50% {left: 1200px; top: 800px;}
+    75% {left: 0; top: 800px;}
+    100% {left: 0; top: 0;}
+}
+
+.subtitle{ animation: around2 15s linear 4;
+	   position: absolute;}
 
 
 footer{
