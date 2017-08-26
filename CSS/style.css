@@ -1,0 +1,32 @@
+
+/* GENERAL 
+----------------------*/
+.page {
+    max-width: 2000px;
+}
+
+body{
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    background: gray;
+    opacity: 0.15;
+}
+
+
+html{
+    background: url(../images/myphoto.jpeg) no-repeat center top fixed;
+    %opacity: 1.0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+
+
+
+/* TEXT
+----------------------*/
+
+
