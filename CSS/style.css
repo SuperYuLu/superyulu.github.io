@@ -14,7 +14,6 @@ body{
 html{
     /* #4b48bc is background blue color */
     background: url(../images/home-background.jpeg) no-repeat center top fixed;
-    opacity: 1.0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -23,18 +22,10 @@ html{
 
 /* HEADER
 ----------------------*/
-header div{
-    display: block;
-    font-size: 1.5em;
-    color: #6397A8;
-    position: absolute;
-    left: 1%;
-    top: 1%;
-}
 
 header nav{
     text-transform: uppercase;
-    color: #333ccc;
+    color: #A2E0F5;
     font-size: 0.8em;
     position: absolute;
     top: 1%;
@@ -44,8 +35,7 @@ header nav{
     padding: 0 0;
     
 }
-
-header li{
+nav li{
     display: inline-block;
     padding: 0 0.8em;
     border-left: 2px solid #aa99ae;
@@ -55,11 +45,36 @@ header li:first-child{
     border-left: none;
 }
 
+
+/* SOCIAL BUTTONS
+----------------------*/
+
+header .button-list{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+.button-list li{
+    display: inline-block;
+    padding: 0 0.2em;
+}
+
+.button-list img{
+    
+    width: 32px;
+    height: 32px;
+}
+
+
 /* FOOTER
 ----------------------*/
 main footer{
     position: absolute;
     bottom: 2%;
+    color: #A2E0F5;
+    font-size: 0.6em;
+    right: 1%;
 }
 
 
@@ -68,11 +83,13 @@ main footer{
 ----------------------*/
 .intro{
     position: absolute;
-    right: 5%;
-    top: 30%;o
-    color: white;
-    width: 40%;
-    background: #0B78A7;
+    right: 15%;
+    top: 40%;
+    font-size: 1.2em;
+    color: black;
+    
+    width: 45%;
+    background: #CDEDF7;
     opacity: 0.5;
     padding: 0.5em 2em;
     
