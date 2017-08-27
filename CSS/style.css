@@ -8,25 +8,74 @@
 body{
     font-family: Geneva, Tahoma, sans-serif;
     font-size: 100%;
-    background: gray;
-    opacity: 0.15;
 }
 
 
 html{
-    background: url(../images/myphoto.jpeg) no-repeat center top fixed;
-    %opacity: 1.0;
+    /* #4b48bc is background blue color */
+    background: url(../images/home-background.jpeg) no-repeat center top fixed;
+    opacity: 1.0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;    
+}
+
+/* HEADER
+----------------------*/
+header div{
+    display: block;
+    font-size: 1.5em;
+    color: #6397A8;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+}
+
+header nav{
+    text-transform: uppercase;
+    color: #333ccc;
+    font-size: 0.8em;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    border-bottom: 1px solid green;
+    margino: 0 0;
+    padding: 0 0;
     
 }
 
+header li{
+    display: inline-block;
+    padding: 0 0.8em;
+    border-left: 2px solid #aa99ae;
+}
+
+header li:first-child{
+    border-left: none;
+}
+
+/* FOOTER
+----------------------*/
+main footer{
+    position: absolute;
+    bottom: 2%;
+}
 
 
 
 /* TEXT
 ----------------------*/
+.intro{
+    position: absolute;
+    right: 5%;
+    top: 30%;o
+    color: white;
+    width: 40%;
+    background: #0B78A7;
+    opacity: 0.5;
+    padding: 0.5em 2em;
+    
+}
 
 
