@@ -26,11 +26,11 @@ html{
 header nav{
     text-transform: uppercase;
     color: #A2E0F5;
-    font-size: 0.8em;
+    font-size: 0.9em;
     position: absolute;
     top: 1%;
     right: 1%;
-    border-bottom: 1px solid green;
+    border-bottom: 2px solid green;
     margino: 0 0;
     padding: 0 0;
     
@@ -60,6 +60,10 @@ header .button-list{
     padding: 0 0.2em;
 }
 
+.button-list li:hover{
+    transform: scale(1.4);
+}
+
 .button-list img{
     
     width: 32px;
@@ -69,7 +73,8 @@ header .button-list{
 
 /* FOOTER
 ----------------------*/
-main footer{
+main footer p{
+    display: block;
     position: absolute;
     bottom: 2%;
     color: #A2E0F5;
@@ -77,21 +82,44 @@ main footer{
     right: 1%;
 }
 
+.htmlCSS {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+}
 
+.htmlCSS li{
+    display: inline-block;
+    
+}
+
+.htmlCSS li:hover{
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.htmlCSS li img{
+    width: 64px;
+    height: 64px;
+}
 
 /* TEXT
 ----------------------*/
 .intro{
+    display: block;
     position: absolute;
     right: 15%;
     top: 40%;
     font-size: 1.2em;
+    text-align: justify;
     color: black;
-    
+    border: 0.2em solid white;
+    -webkit-border-radius: 1em;
+    border-radius:1em;
     width: 45%;
     background: #CDEDF7;
-    opacity: 0.5;
-    padding: 0.5em 2em;
+    opacity: 0.8;
+    padding: 0.1em 0.5em;
     
 }
 
