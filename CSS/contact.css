@@ -1,0 +1,81 @@
+/* GENERAL
+-------------------------------*/
+.page{
+    max-width: 2000px;
+}
+
+body{
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    background: #E6F1E8 no-repeat center center fixed;
+    
+}
+
+/* CONTACT PHOTO
+-------------------------------*/
+.contact-photo-container{
+    float: left;
+    position: absolute;
+    left:10%;
+    top: 25%;
+}
+
+.contact-photo-container img{
+    max-width: 1616px;
+    width: 40%;
+}
+
+/* CONTACT INFO
+-------------------------------*/
+
+.contact-container{
+    float: right;
+    position: absolute;
+    right: 20%;
+    top: 20%;
+    font-size: 1.2em;
+    line-height: 2;
+    
+}
+
+h1{
+    display: block;
+    border-bottom: 0.05em solid #FFFFFF;
+    font-weight: 500;
+    
+}
+
+.items{
+    float:left;
+    
+    
+    
+}
+
+.items li{
+    list-style: none;
+    text-align: right;
+}
+
+
+.content{
+    float: right;
+    
+}
+
+.content li{
+    list-style: none;
+    text-align: left;
+}
+
+
+/* FOOTER
+-------------------------------*/
+footer{
+    display: block;
+    position: absolute;
+    bottom: 2%;
+    color: #A2E0F5;
+    font-size: 0.6em;
+    right: 1%;
+}
