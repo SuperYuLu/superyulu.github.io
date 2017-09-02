@@ -3,7 +3,7 @@
 body{
     font-family: Geneva, Tahoma, sans-serif;
     font-size: 100%;
-    background: #E6F1E8 no-repeat center center fixed;
+    background:#99E5FF no-repeat center center fixed;
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -15,16 +15,20 @@ body{
 /* CONTACT PHOTO
 -------------------------------*/
 .contact-photo-container{
+    box-sizing: border-box;
     position: absolute;
-    right:55%;
-    top: 25%;
-    width: 35%
+    right:50%;
+    top: 0%;
+    width: 50%;
+    height: 100%;
+    background: #F0EFEF;
 }
 
 .contact-photo-container img{
     
-    width: 100%;
+    width: 80%;
     max-width: 1600px;
+    margin: 20% 10%;
 }
 
 /* CONTACT INFO
