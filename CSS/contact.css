@@ -1,49 +1,62 @@
 /* GENERAL
 -------------------------------*/
-.page{
-    max-width: 2000px;
-}
-
 body{
     font-family: Geneva, Tahoma, sans-serif;
     font-size: 100%;
     background: #E6F1E8 no-repeat center center fixed;
-    
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    margin: 0 0;
+    padding: 0 0;
+		
 }
 
 /* CONTACT PHOTO
 -------------------------------*/
 .contact-photo-container{
-    float: left;
     position: absolute;
-    left:10%;
+    right:55%;
     top: 25%;
+    width: 35%
 }
 
 .contact-photo-container img{
-    max-width: 1616px;
-    width: 40%;
+    
+    width: 100%;
+    max-width: 1600px;
 }
 
 /* CONTACT INFO
 -------------------------------*/
-.info{
-    float: right;
+.info-container{
     position: absolute;
-    right: 20%;
-    top: 20%;
-    font-size: 1.2em;
-    line-height: 2;    
+    left: 55%;
+    top: 25%;
+    width: 40%;
+    
 }
 
-p{
-    display: block;
+.info-container p{
+    
+    font-size: 1.5em;
     border-bottom: 0.05em solid #FFFFFF;
     font-weight: 800;
+    margin: 0 0 ;
+    padding: 0 0;
+    width: 60%;
+}
+
+
+.contact-container{
+    float: left;
+    line-height: 2;
+    font-size: 1.2em;
 }
 
 .items{
-    float:left;
+    float: left;
+    margin: 0.5em 0;
 }
 
 .items li{
@@ -53,8 +66,8 @@ p{
 
 
 .content{
+    margin: 0.5em 0;
     float: right;
-    
 }
 
 .content li{
@@ -62,22 +75,34 @@ p{
     text-align: left;
 }
 
+
+
 /* FOLLOW INFO
 -------------------------------*/
+.follow-container{
+    font-size: 1.2em;
+    clear: left;
+    line-height: 2;
+}
+
+
+
 .follow-icons li{
-    list-style: none;
-    margin-left: 10em;
+    display: inline-block;
+    padding: 0 0.6em;
 }
 
-.follow-icons img{
-    width: 1.5em;
-    height: 1.5em;
-}
 
-.follow-icons img:hover{
+
+.follow-icons li:hover{
     transform: scale(1.2);
 }
 
+
+.follow-icons img{
+    width: 2em;
+    height: 2em;
+}
 
 
 /* W3C ICON
@@ -89,13 +114,4 @@ p{
     width:0.6em;
 }
 
-/* FOOTER
--------------------------------*/
-footer{
-    display: block;
-    position: absolute;
-    bottom: 2%;
-    color: #A2E0F5;
-    font-size: 0.6em;
-    right: 1%;
-}
+
