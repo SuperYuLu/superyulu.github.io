@@ -27,22 +27,19 @@ body{
 
 /* CONTACT INFO
 -------------------------------*/
-
-.contact-container{
+.info{
     float: right;
     position: absolute;
     right: 20%;
     top: 20%;
     font-size: 1.2em;
-    line-height: 2;
-    
+    line-height: 2;    
 }
 
-h1{
+p{
     display: block;
     border-bottom: 0.05em solid #FFFFFF;
-    font-weight: 500;
-    
+    font-weight: 800;
 }
 
 .items{
@@ -65,6 +62,32 @@ h1{
     text-align: left;
 }
 
+/* FOLLOW INFO
+-------------------------------*/
+.follow-icons li{
+    list-style: none;
+    margin-left: 10em;
+}
+
+.follow-icons img{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.follow-icons img:hover{
+    transform: scale(1.2);
+}
+
+
+
+/* W3C ICON
+-------------------------------*/
+.W3C-validate{
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    width:0.6em;
+}
 
 /* FOOTER
 -------------------------------*/
