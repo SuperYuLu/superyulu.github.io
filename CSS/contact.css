@@ -4,8 +4,8 @@ body{
     font-family: Geneva, Tahoma, sans-serif;
     font-size: 100%;
     background:#99E5FF no-repeat center center fixed;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     position: absolute;
     margin: 0 0;
     padding: 0 0;
@@ -17,9 +17,9 @@ body{
 .contact-photo-container{
     box-sizing: border-box;
     position: absolute;
-    right:50%;
+    left:0;
     top: 0%;
-    width: 50%;
+    width: 40%;
     height: 100%;
     background: #F0EFEF;
 }
@@ -28,16 +28,17 @@ body{
     
     width: 80%;
     max-width: 1600px;
-    margin: 20% 10%;
+    margin: 30% 10%;
 }
 
 /* CONTACT INFO
 -------------------------------*/
 .info-container{
+    box-sizing: border-box;
     position: absolute;
-    left: 55%;
-    top: 25%;
+    left: 40%;
     width: 40%;
+    height: 100%;
     
 }
 
@@ -56,6 +57,8 @@ body{
     float: left;
     line-height: 2;
     font-size: 1.2em;
+    margin: 30% 10% 0;
+    
 }
 
 .items{
@@ -87,6 +90,9 @@ body{
     font-size: 1.2em;
     clear: left;
     line-height: 2;
+    padding-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 
@@ -99,7 +105,7 @@ body{
 
 
 .follow-icons li:hover{
-    transform: scale(1.2);
+    transform: scale(1.2, 1.2);
 }
 
 
