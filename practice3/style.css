@@ -1,0 +1,139 @@
+/* GENERAL
+-----------------------------------------------------*/
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0 0 ;
+    padding: 0 0;
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+    
+}
+
+/* HEADER 
+-----------------------------------------------------*/
+header{
+    display: inline-block;
+    float: left;
+    margin: 0 0;
+    padding: 0 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,#05206B, #9EB1E6);
+    overflow: hidden;
+        
+}
+
+header img{
+    display: block;
+    float: left;
+    max-width: 100%;
+    opacity: 0.2;
+    /*filter: grayscale(100%);*/
+}
+
+header .keywords{
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.name{
+    font-size: 3em;
+    font-weight: 500;
+    display: inline-block;
+    padding-bottom: 0.5em;
+    border-bottom: 0.05em solid white;
+}
+
+.words{
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* SCROLL PAGES
+-----------------------------------------------------*/
+
+
+/* general
+-----------------------*/
+.item{
+    width: 20%;
+    height: 100%;
+    float: left;
+    margin:2%;
+    
+}
+
+.content{
+    width: 60%;
+    height: 100%;
+    float: right;
+    margin: 2%;
+    margin-right: 5%;
+    font-size: 1.15em;
+}
+
+
+/* page-about
+-----------------------*/
+
+.page-about{
+    background: white;
+    width: 100%;
+    height: 40%;
+    clear: left;
+}
+
+.page-about .item{
+    color: #2D5EE3;
+}
+
+.page-about .content{
+    color: black;
+    text-align: justify;
+}
+
+
+/* PAGE-SKILLSET
+-----------------------------*/
+.page-skillset{
+    clear: left;
+    width: 100%;
+    height: 50%;
+    background: #0AB6F0;    
+}
+
+.page-skillset .item{
+    color: white;
+}
+
+.column-right,
+.column-left{
+    position: static;
+    display: inline-block;
+    height: 2em;
+    width: 40%;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+/*
+.column-left{
+    float: left;
+}
+
+.column-right{
+    float: right;
+}
+	       
+*/
