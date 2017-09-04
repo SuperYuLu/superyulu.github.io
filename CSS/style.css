@@ -66,11 +66,12 @@ header .keywords{
     display: block;
     position: absolute;
     bottom: 1%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 0.5%;
+    transform: translate(0, -50%);
     color: white;
     font-size: 0.6em;
     margin-top: 40%;
+    opacity: 0.6;
 }
 
 .social-buttons{
@@ -121,6 +122,48 @@ header .keywords{
     text-decoration: inherit;
 }
     
+
+.arrow{
+    position:absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 3%;
+    height: 0.5%;
+    transform: translate(-50%, 0);
+}
+
+.arrow li{
+    display: inline-block;
+    width: 120%;
+    height: 80%;
+    background: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.arrow #left{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.arrow #right{
+    
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#left li{
+    transform: rotate(30deg);
+}
+
+#right li{
+    transform: rotate(-30deg);
+}
 
 /* SCROLL PAGES
 -----------------------------------------------------*/
@@ -265,6 +308,21 @@ header .keywords{
     height: 50%;
     color: white;
     background: #2c58a0;
+    margin-bottom: 0;
+    padding-botton: 0;
 }
 
 
+/* PAGE-FOOTER ---> under construction
+
+
+.page-footer{
+    clear: left;
+    height: 50%;
+    width: 100%;
+    background: white;
+    margin-top: 0;
+    padding-top: 0;
+    mix-blend-mode: difference;
+}
+-----------------------------------------------------*/
