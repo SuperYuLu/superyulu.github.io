@@ -15,6 +15,9 @@ body{
     
 }
 
+/* HEADER
+-----------------------------------------------------*/
+
 header{
     display: inline-block;
     float: left;
@@ -56,6 +59,51 @@ header .keywords{
     font-weight: 300;
 }
 
+.build{
+    display: block;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.6em;
+    margin-top: 40%;
+}
+
+.social-buttons{
+    position: absolute;
+    bottom:1%;
+    left:0.5%;
+    margin: 0;
+}
+
+.button-list li{
+    display: inline-block;
+    margin-right:1em;
+}
+
+.button-list li:hover{
+    opacity: 0.5;
+}
+.button-list img{
+    width: 32px;
+    height: 32px;
+}
+
+.navigation{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    color: white;
+    opacity: 0.6;
+}
+
+.navigation li{
+    display: inline-block;
+    margin-right:0.5em;
+    font-size: 0.8em;
+}
+
 /* SCROLL PAGES
 -----------------------------------------------------*/
 
@@ -67,8 +115,6 @@ header .keywords{
     height: 100%;
     float: left;
     margin: 2% 0 0 2%;
-    //margin-right: 0;
-    
 }
 
 .content{
@@ -89,7 +135,7 @@ header .keywords{
 .page-about{
     background: #2c58a0;
     width: 100%;
-    height: 75%;
+    height: 85%;
     clear: left;
 }
 
