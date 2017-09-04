@@ -15,26 +15,21 @@ body{
     
 }
 
-/* HEADER 
------------------------------------------------------*/
 header{
     display: inline-block;
     float: left;
-    margin: 0 0;
-    padding: 0 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom,#05206B, #9EB1E6);
+    background: url("../images/myphoto-home2.jpeg") no-repeat center center fixed;
+    background-size: cover;
     overflow: hidden;
-        
 }
 
-header img{
-    display: block;
-    float: left;
-    max-width: 100%;
-    opacity: 0.2;
-    /*filter: grayscale(100%);*/
+.header-mask{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.8;
 }
 
 header .keywords{
@@ -43,6 +38,7 @@ header .keywords{
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 40%;
     text-align: center;
 }
 
@@ -70,17 +66,20 @@ header .keywords{
     width: 20%;
     height: 100%;
     float: left;
-    margin:2%;
+    margin: 2% 0 0 2%;
+    //margin-right: 0;
     
 }
 
 .content{
+    
     width: 60%;
     height: 100%;
     float: right;
-    margin: 2%;
-    margin-right: 5%;
-    font-size: 1.15em;
+    font-size: 1.2em;
+    margin: 2% 10% 0 0;
+    line-height: 2;
+    overflow-y: auto;
 }
 
 
@@ -88,18 +87,18 @@ header .keywords{
 -----------------------*/
 
 .page-about{
-    background: white;
+    background: #2c58a0;
     width: 100%;
-    height: 40%;
+    height: 75%;
     clear: left;
 }
 
 .page-about .item{
-    color: #2D5EE3;
+    color: white;
 }
 
 .page-about .content{
-    color: black;
+    color: white;
     text-align: justify;
 }
 
@@ -109,31 +108,99 @@ header .keywords{
 .page-skillset{
     clear: left;
     width: 100%;
-    height: 50%;
-    background: #0AB6F0;    
+    height: 80%;
+    background: white;
 }
 
 .page-skillset .item{
-    color: white;
+    color: #2c58a0;
 }
 
-.column-right,
-.column-left{
+.page-skillset .content{
+    color: #2c58a0;
+}
+
+.page-skillset h3{
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.column{
     position: static;
     display: inline-block;
     height: 2em;
-    width: 40%;
+    width: 45%;
     margin-right: 2em;
     margin-bottom: 2em;
 }
 
-/*
-.column-left{
-    float: left;
+.column small{
+    font-size: 0.5em;
 }
 
-.column-right{
-    float: right;
+.progress-bar{
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+    line-height:0.5;
+    margin: 0.2em 0;
 }
-	       
-*/
+
+
+.progress-bar#python{ 
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 90%, #cce0ff 90%, #cce0ff 100%);
+}
+
+.progress-bar#labview{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 60%, #cce0ff 60%, #cce0ff 100%);
+}
+
+
+.progress-bar#c{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 80%, #cce0ff 80%, #cce0ff 100%);
+}
+
+.progress-bar#fortran{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 20%, #cce0ff 20%, #cce0ff 100%);
+}
+
+.progress-bar#matlab{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 50%, #cce0ff 50%, #cce0ff 100%);
+}
+
+.progress-bar#htmlcss{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 40%, #cce0ff 40%, #cce0ff 100%);
+}
+
+.progress-bar#parallel{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 80%, #cce0ff 80%, #cce0ff 100%);
+}
+
+.progress-bar#cad{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 50%, #cce0ff 50%, #cce0ff 100%);
+}
+
+.progress-bar#linux{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 60%, #cce0ff 60%, #cce0ff 100%);
+}
+
+.progress-bar#r{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 10%, #cce0ff 10%, #cce0ff 100%);
+}
+
+.progress-bar#git{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 90%, #cce0ff 90%, #cce0ff 100%);
+}
+
+
+/* PAGE-EXPERIENCE
+-----------------------------*/
+.page-experience{
+    clear: left;
+    width: 100%;
+    height: 50%;
+    color: white;
+    background: #2c58a0;
+}
+
+
