@@ -11,8 +11,11 @@ body{
     position: absolute;
     overflow-x: hidden;
     overflow-y: scroll;
-    
-    
+}
+
+a{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 /* HEADER
@@ -71,10 +74,11 @@ header .keywords{
 }
 
 .social-buttons{
-    position: absolute;
+    position: fixed;
     bottom:1%;
     left:0.5%;
     margin: 0;
+    mix-blend-mode: difference;
 }
 
 .button-list li{
@@ -91,18 +95,32 @@ header .keywords{
 }
 
 .navigation{
-    position: absolute;
+    position: fixed;
     top: 1%;
     right: 1%;
     color: white;
-    opacity: 0.6;
-}
+    mix-blend-mode: difference;
+    }
 
 .navigation li{
     display: inline-block;
     margin-right:0.5em;
     font-size: 0.8em;
+    opacity: 0.6;
+    color: white;
+    
 }
+
+
+.navigation li:hover{
+    opacity: 1;
+}
+
+.navigation li a:visited{
+    color: inherit;
+    text-decoration: inherit;
+}
+    
 
 /* SCROLL PAGES
 -----------------------------------------------------*/
