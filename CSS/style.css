@@ -1,126 +1,206 @@
-
-/* GENERAL 
-----------------------*/
-.page {
-    max-width: 2000px;
-}
+/* GENERAL
+-----------------------------------------------------*/
 
 body{
+    width: 100%;
+    height: 100%;
+    margin: 0 0 ;
+    padding: 0 0;
     font-family: Geneva, Tahoma, sans-serif;
     font-size: 100%;
-}
-
-
-html{
-    /* #4b48bc is background blue color */
-    background: url(../images/home-background.jpeg) no-repeat center top fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;    
-}
-
-/* HEADER
-----------------------*/
-
-header nav{
-    text-transform: uppercase;
-    color: #A2E0F5;
-    font-size: 0.9em;
     position: absolute;
-    top: 1%;
-    right: 1%;
-    border-bottom: 2px solid green;
-    margin: 0 0;
-    padding: 0 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
     
-}
-nav li{
-    display: inline-block;
-    padding: 0 0.8em;
-    border-left: 2px solid #aa99ae;
-}
-
-header li:first-child{
-    border-left: none;
-}
-
-
-/* SOCIAL BUTTONS
-----------------------*/
-
-header .button-list{
-    position: absolute;
-    top: 1%;
-    left: 1%;
-}
-
-.button-list li{
-    display: inline-block;
-    padding: 0 0.2em;
-}
-
-.button-list li:hover{
-    transform: scale(1.4);
-}
-
-.button-list img{
-    
-    width: 32px;
-    height: 32px;
-}
-
-
-/* FOOTER
-----------------------*/
-main footer p{
-    display: block;
-    position: absolute;
-    bottom: 2%;
-    color: #A2E0F5;
-    font-size: 0.6em;
-    right: 1%;
-}
-
-.htmlCSS {
-    position: absolute;
-    bottom: 1%;
-    left: 1%;
-}
-
-.htmlCSS li{
-    display: inline-block;
     
 }
 
-.htmlCSS li:hover{
-    -webkit-transform: rotate(60deg);
-    transform: rotate(60deg);
+header{
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url("../images/myphoto-home2.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
 }
 
-.htmlCSS li img{
-    width: 64px;
-    height: 64px;
-}
-
-/* TEXT
-----------------------*/
-.intro{
-    display: block;
-    position: absolute;
-    right: 15%;
-    top: 40%;
-    font-size: 1.2em;
-    text-align: justify;
-    color: black;
-    border: 0.2em solid white;
-    -webkit-border-radius: 1em;
-    border-radius:1em;
-    width: 45%;
-    background: #CDEDF7;
+.header-mask{
+    width: 100%;
+    height: 100%;
+    background: black;
     opacity: 0.8;
-    padding: 0.1em 0.5em;
+}
+
+header .keywords{
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    text-align: center;
+}
+
+.name{
+    font-size: 3em;
+    font-weight: 500;
+    display: inline-block;
+    padding-bottom: 0.5em;
+    border-bottom: 0.05em solid white;
+}
+
+.words{
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* SCROLL PAGES
+-----------------------------------------------------*/
+
+
+/* general
+-----------------------*/
+.item{
+    width: 20%;
+    height: 100%;
+    float: left;
+    margin: 2% 0 0 2%;
+    //margin-right: 0;
     
+}
+
+.content{
+    
+    width: 60%;
+    height: 100%;
+    float: right;
+    font-size: 1.2em;
+    margin: 2% 10% 0 0;
+    line-height: 2;
+    overflow-y: auto;
+}
+
+
+/* page-about
+-----------------------*/
+
+.page-about{
+    background: #2c58a0;
+    width: 100%;
+    height: 75%;
+    clear: left;
+}
+
+.page-about .item{
+    color: white;
+}
+
+.page-about .content{
+    color: white;
+    text-align: justify;
+}
+
+
+/* PAGE-SKILLSET
+-----------------------------*/
+.page-skillset{
+    clear: left;
+    width: 100%;
+    height: 80%;
+    background: white;
+}
+
+.page-skillset .item{
+    color: #2c58a0;
+}
+
+.page-skillset .content{
+    color: #2c58a0;
+}
+
+.page-skillset h3{
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.column{
+    position: static;
+    display: inline-block;
+    height: 2em;
+    width: 45%;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+.column small{
+    font-size: 0.5em;
+}
+
+.progress-bar{
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+    line-height:0.5;
+    margin: 0.2em 0;
+}
+
+
+.progress-bar#python{ 
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 90%, #cce0ff 90%, #cce0ff 100%);
+}
+
+.progress-bar#labview{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 60%, #cce0ff 60%, #cce0ff 100%);
+}
+
+
+.progress-bar#c{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 80%, #cce0ff 80%, #cce0ff 100%);
+}
+
+.progress-bar#fortran{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 20%, #cce0ff 20%, #cce0ff 100%);
+}
+
+.progress-bar#matlab{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 50%, #cce0ff 50%, #cce0ff 100%);
+}
+
+.progress-bar#htmlcss{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 40%, #cce0ff 40%, #cce0ff 100%);
+}
+
+.progress-bar#parallel{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 80%, #cce0ff 80%, #cce0ff 100%);
+}
+
+.progress-bar#cad{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 50%, #cce0ff 50%, #cce0ff 100%);
+}
+
+.progress-bar#linux{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 60%, #cce0ff 60%, #cce0ff 100%);
+}
+
+.progress-bar#r{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 10%, #cce0ff 10%, #cce0ff 100%);
+}
+
+.progress-bar#git{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 90%, #cce0ff 90%, #cce0ff 100%);
+}
+
+
+/* PAGE-EXPERIENCE
+-----------------------------*/
+.page-experience{
+    clear: left;
+    width: 100%;
+    height: 50%;
+    color: white;
+    background: #2c58a0;
 }
 
 
