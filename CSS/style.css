@@ -75,7 +75,7 @@ header .keywords{
 }
 
 .social-buttons{
-    position: fixed;
+    position: absolute;
     bottom:1%;
     left:0.5em;
     margin: 0;
@@ -197,7 +197,7 @@ header .keywords{
 .page-about{
     background: #2c58a0;
     width: 100%;
-    height: 95%;
+    height: 100%;
     clear: left;
 }
 
@@ -216,7 +216,7 @@ header .keywords{
 .page-skillset{
     clear: left;
     width: 100%;
-    height: 80%;
+    height: 85%;
     background: white;
 }
 
@@ -237,13 +237,13 @@ header .keywords{
     position: static;
     display: inline-block;
     height: 2em;
-    width: 45%;
-    margin-right: 2em;
+    width: 40%;
+    margin-right: 4em;
     margin-bottom: 2em;
 }
 
 .column small{
-    font-size: 0.5em;
+    font-size: 0.35em;
 }
 
 .progress-bar{
@@ -277,7 +277,7 @@ header .keywords{
 }
 
 .progress-bar#htmlcss{
-    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 40%, #cce0ff 40%, #cce0ff 100%);
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 70%, #cce0ff 70%, #cce0ff 100%);
 }
 
 .progress-bar#parallel{
