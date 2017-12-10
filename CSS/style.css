@@ -197,7 +197,7 @@ header .keywords{
 .page-about{
     background: #2c58a0;
     width: 100%;
-    height: 100%;
+    height: 120%;
     clear: left;
 }
 
@@ -216,7 +216,7 @@ header .keywords{
 .page-skillset{
     clear: left;
     width: 100%;
-    height: 85%;
+    height: 105%;
     background: white;
 }
 
@@ -248,7 +248,7 @@ header .keywords{
 
 .progress-bar{
     display: inline-block;
-    width: 100%;
+    width: 90%;
     height: 20%;
     line-height:0.5;
     margin: 0.2em 0;
@@ -297,7 +297,21 @@ header .keywords{
 }
 
 .progress-bar#git{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 100%, #cce0ff 100%, #cce0ff 100%);
+}
+
+.progress-bar#flask{
     background: linear-gradient(to right, #2c58a0 0%, #2c58a0 90%, #cce0ff 90%, #cce0ff 100%);
+}
+
+
+.progress-bar#psql{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 80%, #cce0ff 80%, #cce0ff 100%);
+}
+
+
+.progress-bar#sqla{
+    background: linear-gradient(to right, #2c58a0 0%, #2c58a0 60%, #cce0ff 60%, #cce0ff 100%);
 }
 
 
@@ -310,7 +324,7 @@ header .keywords{
     color: white;
     background: #2c58a0;
     margin-bottom: 0;
-    padding-botton: 0;
+    padding-bottom: 0;
 }
 
 
