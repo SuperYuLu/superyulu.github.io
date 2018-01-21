@@ -1,0 +1,80 @@
+<!-- blog.html --- 
+     ;; 
+     ;; Filename: blog.html
+     ;; Description:  
+     ;;            html blog page renderer
+     ;; Author:    Yu Lu
+     ;; Email:     yulu@utexas.edu
+     ;; Github:    https://github.com/SuperYuLu 
+     ;; 
+     ;; Created: Wed Dec 20 22:36:47 2017 (-0600)
+     ;; Version: 
+     ;; Last-Updated: Sun Jan 21 15:48:31 2018 (-0600)
+     ;;           By: yulu
+     ;;     Update #: 234
+     ;; 
+
+  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "global-head.html" %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/blog.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav-bar.css') }}" >
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/footer.css') }}" >
+  </head>
+
+  <body>
+    {% include "global-nav-bar.html" %}
+
+    <div class="content">
+
+      <div class="post-container">
+	{% for post in posts %}
+
+	<div class="single-post-container">
+
+	  <div class="post-metadata" >
+	    <ul>
+	      <li> {{ post.time }} </li>
+	      <li> {{ post.date }} </li>
+	      <li> {{ post.location }} </li>
+	      <li> {{ post.country }} </li>
+	      <li> by {{ post.author }} </li>
+	      <li> # {{ post.category }} </li>
+	    </ul>
+	  </div>
+	  
+	  <div class="post-title-img">
+	    
+	    <a href="{{ url_for('post', name=post.path.split('/')[0]) }}">
+	 
+	      <h2> {{ post.title }} </h2>
+	    </a>
+	    <a href="{{ url_for('post', name=post.path.split('/')[0]) }}">
+	      <img src="{{ url_for('static', filename='posts/' + post.path.split('/')[0] + '/cover.jpg')}}">
+	    </a>
+	    
+	    <p> {{ post.abstract }} </p>
+	    <a href="{{ url_for('post', name=post.path.split('/')[0]) }}">  <p>read more > </p></a> 
+	  </div>
+	  
+	</div>
+	{% endfor %}
+      </div>
+
+      <div class="category-container">
+	<h3> Categories </h3>
+	<ul>
+	  {% for cat in categoryStats %}
+	  <li> {{ cat }}({{ categoryStats[cat] }}) </li>
+	  {% endfor %}
+	</ul>
+      </div>
+    </div>
+    
+    {% include "global-footer.html" %}
+  </body>
+
+</html>
+

@@ -1,0 +1,159 @@
+<!-- home.html --- 
+     ;; 
+     ;; Filename: home.html
+     ;; Description: 
+     ;;  My new homepage
+     ;; Author:    Yu Lu
+     ;; Email:     yulu@utexas.edu
+     ;; Github:    https://github.com/SuperYuLu 
+     ;; 
+     ;; Created: Wed Dec 13 20:56:00 2017 (-0600)
+     ;; Version: 
+     ;; Last-Updated: Sun Jan 21 16:54:03 2018 (-0600)
+     ;;           By: yulu
+     ;;     Update #: 156
+     ;; 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "global-head.html" %}
+    <link rel="stylesheet" href="{{ url_for("static", filename = "css/home.css") }}" >
+    <link rel="stylesheet" href="{{ url_for("static", filename = "css/nav-bar.css") }}" >
+    <title> Yu Lu - Home</title>
+  </head>
+  <body>
+
+    {% include "global-nav-bar.html" %}
+    <!-- Splash page -->
+    <div class="block-row splash">
+      <div class="block-col">
+	<img src="{{ url_for("static", filename="img/mypics/myphoto-splash.jpg") }}">
+      </div>
+      <div class="block-col intro">
+	<p> Hello, I'm Yu Lu, </p>
+	<p> Ph.D. candidate at UT Austin, </p>
+	<p> Research on AMO physics. </p>
+	<p> Self-taught programmer, </p>
+	<p> Big fan of Linux, Computer Science, </p>
+	<p> Data Science and Machine Learning. </p>
+	<p> Also interested in, </p>
+	<p> travelling, running, Nunchaku, etc. </p>
+      </div>
+
+      <nav class="icons">
+	<ul>
+	  <li> <a  href="https://github.com/SuperYuLu"> <img src="{{ url_for('static', filename = "img/icons/Github-outline-white-64px.png") }}" alt="SuperYuLu@Github"> </a> </li>
+	  <li> <a href="https://www.linkedin.com/in/yu-lu-12b123a6/"> <img src="{{ url_for('static', filename = "img/icons/Linkedin-outline-white-64px.png") }}" alt="Yu Lu @LinkedIn"> </a> </li>
+	  <li> <a href="https://www.facebook.com/SuperFasterLu"> <img src="{{ url_for('static', filename = "img/icons/Facebook-outline-white-64px.png") }}" alt="Yu Lu@Facebook"> </a> </li>
+	  <li> <a  href="https://weibo.com/u/3516856650"> <img src="{{url_for('static', filename = "img/icons/Sina-outline-white-64px.png") }}"  alt="luxiaoxia@sina"> </a> </li>
+	</ul>
+      </nav>
+      
+    </div>
+
+    <!-- University -->
+    <div class="block-row UT">
+      <div class="block-col">
+	<img alt="UT-Austin" src="{{ url_for('static', filename="img/splash/utaustin.jpg") }}">
+      </div>
+
+      <div class="block-col">
+	<h2> University </h2>
+	<p> I'm doing my Ph.D.in <a alt="UT Austin" href="https://www.utexas.edu/"> <i> University of Texas at  Austin </i> </a>. I came to this place during the hot summer of Texas in August, 2014, amazed by this eighth-largest campus in U.S., everything here is organized well, even with more than 50,000 student studying on campus. </p>
+	<p> I'm having a great time here doing research on AMO physics, while taking variaty of computer science and data science courses. The University provides excellent opportunity for me to learn, create, and get to know awesome people. </p> 
+      </div>
+    </div>
+
+    <!-- Research  -->
+    <div class="block-row research">
+      <div class="block-col">
+	<img alt='cold atoms' src="{{ url_for('static', filename="img/splash/researchImg.jpg") }}">
+      </div>
+      <div class="block-col">
+	<h2> Research </h2>
+	<p> My research in focusing on an alternative cooling method for large BEC( <i> Bose-Einstein Condensate </i>). We are achieving this through two parallel apparches: adiabatic deceleration of supersonic lithium atoms, Magneto-Optical Colling (MOP). </p>
+	<p> In the first apprach, I work on building a 2.5-meters-long magnetic decelerator, which consist of 480 anti-Helmholtz coils with micro-seconds-level time time sequence control by FPGA (<i> Field Programmable Gate Array </i> ). Fast moving but inertially cold atoms are decelerated from about 500 m/s to rest while keep the atom cloud cold under the vacuum. High flux and mili-Kelvin atom source was generated. </p>
+      </div>
+    </div>
+
+    
+    <!-- Skills page -->
+    <div class="block-row skills">
+      <div class="block-col">
+	<h2> Skills </h2>
+      </div>
+      <div class="block-col">
+	<ul>
+	  <li><font size="+3"> Python </font></li>
+	  <li> <font size="+2.5">C/C++</font> </li>
+	  <li> <font size="+2.5">HTML/CSS </font></li>
+	  <li> <font size="+2.5">Linux </font></li>
+	  <li> <font size="+2.5">SQL </font></li>
+	  <li> <font size="+2.5">Labview </font></li>
+	  <li> <font size="+3">Git </font></li>
+	  <li> <font size="+2.5">MATLAB </font></li>
+	  <li> <font size="+1.5">Parallel Computing </font></li>
+	  <li> <font size="+1">Fortran </font></li>
+	</ul>
+      </div>
+    </div>
+
+    <!-- blog page -->
+    <div class="block-row blog">
+      <div class="block-col">
+	<h2>  Recent blogs </h2>
+      </div>
+      <div class="block-col">
+	
+	<ul>
+	  {% for post in recentPostsInfo %}
+	  <li> <div class="title-region"> <a href={{ "/blog/" + post[0].replace(':', '_').replace(' ', '_').replace('__','_').lower() }}> <em> {{ post[0] }} </em> </a></div> <div class="info-region">   #{{post[1] }} |  {{ post[2] }} </div> </li> 
+	  {% endfor %}
+	</ul>
+	
+      </div>
+    </div>
+    
+    <!--footer page -->
+    <div class="block-row footer">
+      
+      <div class="block-column">
+	<h3> Site </h3>
+	<ul>
+	  <li> <a href="/home"> Home </a> </li>
+	  <li> <a href="/blog"> Blog </a> </li>
+	  <li> <a href="/resume"> Resume </a> </li>
+	  <li> <a href="/contact"> Contact </a> </li>
+	</ul>
+      </div>
+      
+      <div class="block-column">
+	<h3> Build </h3>
+	<ul>
+	  <li> Love </li>
+	  <li> HTML5 / CSS3 </li>
+	  <li> Python3 / Markdown </li>
+	  <li> Flask / Frozen-Flask / Flask-FlatPages  </li>
+	</ul>
+      </div>
+      
+      <div class="block-column">
+	<h3> Resources </h3>
+	<ul>
+	  <li> Hosted on: Github Pages </li>
+	  <li> Source code: <a href="https://github.com/SuperYuLu/NewHomePage"> Github </a> </li>
+	</ul>
+      </div>
+
+      <div class="copy">
+	<p> All rights reserved &copy 2018 </p>
+      </div>
+	
+	  
+    </div>
+    
+   
+  </body>
+</html>

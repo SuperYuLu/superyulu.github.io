@@ -1,0 +1,130 @@
+/*post.css --- 
+;; 
+;; Filename: post.css
+;; Description: 
+;; 
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sun Dec 24 18:09:49 2017 (-0600)
+;; Version: 
+;; Last-Updated: Sun Jan 21 17:12:06 2018 (-0600)
+;;           By: yulu
+;;     Update #: 127
+;; 
+*/
+
+:root{
+    --color-gray1: #FBFBFB;
+    --color-gray2: #F8F8F8;
+    --color-gray3: #FFFFFF;
+    --color-gray4: #FCFCFC;
+    --color-gray-line: #ECECEC;
+    --color-highlight: #4A60B9;
+    --screen-width: 100vw;
+    --screen-height: 100vh;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+html{
+    background: white;
+    color: black;
+    font-size: calc(0.01 * var(--screen-width));
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    
+}
+
+
+a,
+a :link{
+    color: inherit;
+    text-decoration: none;
+}
+
+a :active, 
+a :visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+/*----
+Layout
+-----*/
+.content{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: auto;
+    margin-top: 2%;
+    width: 85%;
+}
+
+.markdown{
+    flex: 1 1 65%;
+}
+
+.side{
+    flex: 1 1 25%;
+    margin: 0 2%;
+}
+
+/*----
+Title 
+-----*/
+h1{
+    padding-bottom: 1rem;
+    border-bottom: 0.2rem solid #EFEFEF;
+    padding-top: 0;
+    margin-top: 0.2rem;
+    
+}
+
+.metadata{
+    color: gray;
+}
+
+.metadata p{
+    display: inline-block;
+    margin: 0 0;
+    padding: 0 0;
+
+}
+
+
+
+/*--------
+markdown
+---------*/
+p img{
+    display: block;
+    max-width: calc(0.4*var(--screen-width));
+    height: auto;
+}
+
+.markdown{
+    font-size: 1.2rem;
+}
+
+/*---------
+Cover photo
+----------*/
+img:first-of-type{
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(0.4*var(--screen-height));
+    height: auto;
+    padding: auto;
+}
+
+
+
+/*---------
+side block
+----------*/
+

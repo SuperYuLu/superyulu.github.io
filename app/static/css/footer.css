@@ -1,0 +1,68 @@
+/*global-footer.css --- 
+;; 
+;; Filename: global-footer.css
+;; Description: 
+;; 
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sun Jan 21 15:10:49 2018 (-0600)
+;; Version: 
+;; Last-Updated: Sun Jan 21 16:15:30 2018 (-0600)
+;;           By: yulu
+;;     Update #: 18
+;; 
+*/
+
+.footer-row{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+/*-----
+Footer
+------*/
+.footer{
+    background-color: #4A4A4A;
+    line-height: 2rem;
+    padding: 2rem 0 0 0;
+    color: white;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+
+
+.footer>:first-child{
+    flex: 1;
+    margin: 5%;
+}
+
+.footer>:nth-child(2){
+    flex: 1;
+}
+
+.footer>:nth-child(3){
+    flex: 1;
+    margin: 5%;
+}
+
+.footer .copy{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer .claim-static{
+    margin: 2rem 0 0 0;
+}
+    
+.footer .copy p{
+    padding: 0 2rem;
+    display: inline-block;
+    border-top: 0.05rem solid gray;
+}

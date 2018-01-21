@@ -1,0 +1,148 @@
+/*blog.css --- 
+;; 
+;; Filename: blog.css
+;; Description: 
+;; 
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Fri Dec 22 22:12:33 2017 (-0600)
+;; Version: 
+;; Last-Updated: Sun Jan 21 15:50:46 2018 (-0600)
+;;           By: yulu
+;;     Update #: 116
+;; 
+*/
+
+
+/*--------
+GENERAL
+---------*/
+:root{
+    --color-gray1: #FBFBFB;
+    --color-gray2: #F8F8F8;
+    --color-gray3: #FFFFFF;
+    --color-gray4: #FCFCFC;
+    --color-gray-line: #ECECEC;
+    --color-highlight: #4A60B9;
+    --screen-width: 100vw;
+    --screen-height: 100vh;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+html{
+    background: white;
+    color: black;
+    font-size: calc(0.01 * var(--screen-width));
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    
+}
+
+
+a,
+a :link{
+    color: inherit;
+    text-decoration: none;
+}
+
+a :active, 
+a :visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+/* Layout
+---------*/
+.content{
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 15%;
+    padding-top: 5%;
+}
+
+
+.post-container{
+    flex: 1 1 60%;
+}
+
+.category-container{
+    flex: 1 1 40%;
+}
+
+.single-post-container{
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 0.2rem solid #EFEFEF;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    height: auto;
+}
+
+.post-metadata{
+    flex: 1 1 20%;
+    border-right: 0.2rem solid gray;
+    margin-right: 1rem;
+    align-self: baseline;
+}
+
+.post-title-img{
+    flex: 1 1 80%;
+    margin: 0 0;
+    margin-left: 0.2rem;
+    align-self: baseline;
+    
+}
+
+
+/*-----------
+Post Metadata
+-------------*/
+
+.post-metadata{
+    color: gray;
+    text-align: right;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.post-metadata ul{
+    list-style: none;
+    margin-right: 1rem;
+}
+
+    
+/*------------
+post-title-img
+--------------*/
+.post-title-img{
+    font-size: 0.9em;
+    line-height: 1.2em;
+}
+
+.post-title-img a{
+    text-decoration: underline;
+}
+
+.post-title-img h2{
+    padding: 0 0;
+    padding-bottom: 0.1rem 0;
+}
+.post-title-img p{
+    font-style: italic;
+}
+
+.post-title-img img{
+    display: block;
+    width: 90%;
+    max-height: calc(0.3 * var(--screen-height));
+    height: auto;
+}
+
+

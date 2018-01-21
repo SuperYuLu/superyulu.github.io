@@ -1,0 +1,238 @@
+/*resume.css --- 
+;; 
+;; Filename: resume.css
+;; Description: 
+;; 
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sat Jan 20 16:43:09 2018 (-0600)
+;; Version: 
+;; Last-Updated: Sun Jan 21 08:18:02 2018 (-0600)
+;;           By: yulu
+;;     Update #: 213
+;; 
+*/
+
+/*------
+ General
+-------*/
+
+:root{
+    --color-gray1: #D8D8D8;
+    --color-gray2: #D4D4D4;
+    --color-gray3: #D1D1D1;
+    --color-gray4: #DEDEDE;
+    --color-highlight: #89E0FF;
+    --screen-width: 100vw;
+    --screen-height: 100vh;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+html{
+    background: white;
+    color: black;
+    font-size: calc(0.01 * var(--screen-width));
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    
+}
+
+
+.row{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+.col-left{
+    width: 40%;
+    padding: 2rem 2rem 2rem calc(0.1*var(--screen-width));
+    text-align: right;
+}
+
+.col-right{
+    width: 60%;
+    padding: 2rem calc(0.1*var(--screen-width)) 2rem 2rem;
+}
+
+
+/*-----
+Splash
+------*/
+.splash{
+    min-height: calc(0.8*var(--screen-height));;
+}
+
+.splash .col-left{
+    background-color: var(--color-gray1);
+}
+
+.splash .col-right{
+    background-color: var(--color-gray3);
+}
+
+.splash .header{
+    position: absolute;
+    top: 0;
+}
+.cover-pic img{
+    max-width: 30%;
+    border-radius: 50%;
+    margin-top: calc(0.3*var(--screen-height));
+    margin-left: 60%;
+}
+
+.splash h1{
+    margin: calc(0.3*var(--screen-height)) 0 0 5%;
+    font-size: 4rem;
+}
+
+.splash p{
+    display: inline-block;
+    margin: 2rem 5% 0 5%;
+    border-bottom: 0.2rem solid black;
+}
+
+.splash nav{
+    list-style: none;
+}
+
+.splash li{
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+.splash li img{
+    max-width: 2rem;
+}
+    
+/*----
+Intro
+-----*/
+
+
+.intro .col-left{
+    background-color: var(--color-gray2);
+
+}
+
+.intro .col-right{
+    background-color: var(--color-gray4);
+}
+
+
+/*-----
+Skills
+-----*/
+.skills .col-left{
+    background-color: var(--color-gray1);
+}
+
+.skills .col-right{
+    background-color: var(--color-gray3);
+}
+
+.skills ul{
+    list-style: none;
+    line-height: 1rem;
+    
+}
+
+.skills li{
+    display: block;
+    font-size: 1rem;
+}
+
+.skills ul>:nth-child(4n){
+    margin: 0.1rem 5%;
+}
+
+.skills ul>:nth-child(4n+1){
+    margin: 0.3rem 80%;
+}
+
+
+.skills ul>:nth-child(4n+2){
+    margin: 0.2rem  50%;
+    
+}
+
+.skills ul>:nth-child(4n+3){
+    margin: 0.3rem  30%;
+    
+}
+
+.size4{font-size: 2.5rem;}
+.size3{font-size: 1.7rem;}
+.size2{font-size: 1.5rem;}
+.size1{font-size: 1rem;}
+
+
+/*--------
+Experience
+---------*/
+.experience .col-left{
+    background-color: var(--color-gray2);
+}
+
+.experience .col-right{
+    background-color: var(--color-gray4);
+}
+
+.exp-subrow{
+    display: flex;
+    flex-flow: row wrap;
+    //margin: 0 0 2rem 0;
+}
+
+.dot{
+    background: var(--color-highlight);
+    width: 2rem;
+    height: 2rem;
+    border: 0.6rem solid var(--color-gray4);
+    border-radius: 50%;
+    position: relative;
+    left: 1rem;
+    top: 1rem;
+    
+}
+.exp-entry{
+    flex: 1 30%;
+    line-height:100%;
+    text-align: left;
+    margin-top: 1rem;
+    padding: 0 2rem 0 1rem;
+    border-left: 0.3rem solid var(--color-gray2);
+    }
+
+.exp-content{
+    flex: 1 60%;
+}
+
+.exp-time{
+    font-size: 0.6rem;
+    opacity: 0.5;
+}
+
+.exp-title{
+    font-weight: 500;
+}
+
+.exp-institute{
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.exp-location{
+    font-size: 0.6rem;
+    opacity: 0.5;
+}
+
+

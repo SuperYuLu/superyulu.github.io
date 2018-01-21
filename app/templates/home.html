@@ -1,0 +1,270 @@
+<!-- resume.html --- 
+;; 
+;; Filename: resume.html
+;; Description: 
+;; 
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sat Jan 20 16:39:47 2018 (-0600)
+;; Version: 
+;; Last-Updated: Sun Jan 21 17:05:38 2018 (-0600)
+;;           By: yulu
+;;     Update #: 92
+;; 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "global-head.html" %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/home.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename = "css/nav-bar.css") }}" >
+    <link rel="stylesheet" href="{{ url_for("static", filename = "css/footer.css") }}" >
+  </head>
+  <body>
+    <!-- Splash -->
+    <div class="row splash">
+      {% include "global-nav-bar.html" %}
+      <div class="col-left cover-pic">
+	<img src="{{ url_for("static", filename="img/homepage/my_face.jpg") }}">
+      </div>
+      <div class="col-right cover-info">
+	<h1> Yu Lu </h1>
+	<p> Physics Ph.D. Candidate // Programming Enthusiast </p>
+	<div class="checkout-blog"> Check out my personal blogs <a href="/blog/"> here </a>. </div>
+	<nav>
+	  <ul>
+	    <li> <a  href="https://github.com/SuperYuLu"> <img src="{{ url_for('static', filename = "img/icons/GitHub-Mark-64px.png") }}" alt="SuperYuLu@Github"> </a> </li>
+	    <li> <a href="https://www.linkedin.com/in/yu-lu-12b123a6/"> <img src="{{ url_for('static', filename = "img/icons/LinkedIn-Mark-64px.png") }}" alt="Yu Lu @LinkedIn"> </a> </li>
+	    <li> <a href="https://www.facebook.com/SuperFasterLu"> <img src="{{ url_for('static', filename = "img/icons/Facebook-Mark-64px.png") }}" alt="Yu Lu@Facebook"> </a> </li>
+	    <li> <a  href="https://weibo.com/u/3516856650"> <img src="{{url_for('static', filename = "img/icons/Sinaweibo-Mark-64px.png") }}"  alt="luxiaoxia@sina"> </a> </li>
+	  </ul>
+	</nav>
+      </div>
+    </div>
+
+    <!-- Intro -->
+    <div class="row intro">
+      <div class="col-left">
+	<h2> INTRO </h2>
+	<p> What I am all about </p>
+      </div>
+      <div class="col-right">
+	<p> I was born in a small town in northwest China as the only child in my family. My childhood dream was to be a bus driver, as I grow up, this dream changes to taxi driver, then a doctor in physics. Driven by this dream, I got my bachelor's degree from <em> University of Science and Technology of China </em>, major in theoritical physics. Exposed to more interesting physics in the lab, I started my Ph.D. in experimental physics in <em> University of Texas at Austin </em>. </p>
+	<p> While enjoying the joy of sloving physics problems, I'm also excited with programming , including physical simulation with C/C++/python, web front end design with HTML/CSS, backend development using python and SQL, parallel computing with C++/Fortran, IoT device programming using python / linux shell script, Labview experiment cotrol and DAQ, statistical learning and data science, etc. I'm also a big fan of linux OS. </p>
+      </div>
+    </div>
+    
+    <!-- Skills -->
+    <div class="row skills">
+      <div class="col-left">
+	<h2> SKILLS </h2>
+	<p> Always learning new </p>
+      </div>
+      <div class="col-right">
+	<ul>
+	  <li> <div class="size4"> Python </div></li>
+	  <li> <div class="size3"> C/C++ </div> </li>
+	  <li> <div class="size4"> HTML/CSS </div></li>
+	  <li> <div class="size3"> Linux </div></li>
+	  <li> <div class="size4"> Lasers </div></li>
+	  <li> <div class="size4"> Physics  </div></li>
+	  <li> <div class="size3"> SQL </div></li>
+	  <li> <div class="size1"> JavaScript </div></li>
+	  <li> <div class="size3"> Labview </div></li>
+	  <li> <div class="size4"> Git </div></li>
+	  <li> <div class="size2"> GCP </div></li>
+	  <li> <div class="size4"> Statistics </div></li>
+	  <li> <div class="size3"> MATLAB </div></li>
+	  <li> <div class="size2"> Parallel Computing </div></li>
+	  <li> <div class="size4"> Nunchaku </div></li>
+	  <li> <div class="size1"> Fortran </div></li>
+	  <li> <div class="size3"> Data Analyzing </div></li>
+	  <li> <div class="size3"> Math </div></li>
+	  
+	</ul>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="row experience">
+      <div class="col-left">
+	<h2> Experience </h2>
+	<p> Yes, I've been around </p>
+      </div>
+      <div class="col-right">
+	<!-- Research Assistant -->
+	<div class="exp-subrow">
+	  <div class="dot"> </div>
+	  <div class="exp-entry">
+	    <div class="exp-time"> 2015 - Present </div>
+	    <h3 class="exp-title"> Research Assistant </h3>
+	    <h4 class="exp-institute"> University of Texas at Austin </h4>
+	    <h5 class="exp-location"> Austin, TX, U.S. </h5>
+	  </div>
+	  <div class="exp-content">
+	    <p> Appointed as graduate research assistant, I'm devoting most of my time in the lab working on Atomic Molecular and Optical (AMO) Physics experiment. We are trying to experimently propose and prove a novel approach to create large Bose-Einstein-Condensate (BEC).</p>
+	  </div>
+	</div>
+
+	<!-- Nettunes -->
+	<div class="exp-subrow">
+	  <div class="dot"> </div>
+	  <div class="exp-entry">
+	    <div class="exp-time"> 2017.09 - 2017.12 </div>
+	    <h3 class="exp-title"> Nettunes Web Developer </h3>
+	    <h4 class="exp-institute"> UT Computer Science Dept.</h4>
+	    <h5 class="exp-location"> Austin, TX, U.S. </h5>
+	  </div>
+	  <div class="exp-content">
+	    <p> I worked on python backend development of website nettunes, with other four teammates, as the project of software engineering. Nettunes is a website which hosts a database of daily top ranked pop songs and their detailed information. We use Python / PostgreSQL as our backend and HTML5/CSS3/JavaScript as frontend. We also had our dynamic website hosted on Google Cloud Platform (GCP) with a web crawler to grap updated data daily. A static version is hosted here. </p>
+	  </div>
+	</div>
+	
+	<!-- Presenter -->
+	<div class="exp-subrow">
+	  <div class="dot"> </div>
+	  <div class="exp-entry">
+	    <div class="exp-time"> 2017.06 </div>
+	    <h3 class="exp-title"> Presenter at 48th<br> DAMOP<br> Annual Meeting</h3>
+	    <h4 class="exp-institute"> American Physical Society </h4>
+	    <h5 class="exp-location"> Sacramento, CA, U.S. </h5>
+	  </div>
+	  <div class="exp-content">
+	    <p> DAMOP (Department of Atomic Molecular Optical Physics) is one of the most influential annual conference in AMO physics, organized by American Physical Society (APS). I attended this week-long conference and presented a poster on our newest progress in the lab. Here is the poster (<b> link to be added </b>)</p>
+	  </div>
+	</div>
+
+	<!-- Parallel Algorithm Designer -->
+	<div class="exp-subrow">
+	  <div class="dot"> </div>
+	  <div class="exp-entry">
+	    <div class="exp-time"> 201701 - 2017.05 </div>
+	    <h3 class="exp-title"> Parallel Algorithm Designer </h3>
+	    <h4 class="exp-institute"> TACC Super Computing Center </h4>
+	    <h5 class="exp-location"> Austin, Tx, U.S. </h5>
+	  </div>
+	  <div class="exp-content">
+	    <p> I worked on developping a parallel algorithm to speed up simulations of a massive optical pumping process for our research lab, based on <em> Texas Advanced Computing Center </em> (TACC). The code was running on Stampede Cluster with hybird algorithm of openMP and MPI. Source code hosted here(<b> link to be added </b>).</p>
+	  </div>
+	</div>
+
+	<!-- CLAD -->
+	<div class="exp-subrow">
+	  <div class="dot"> </div>
+	  <div class="exp-entry">
+	    <div class="exp-time"> 2016.04 </div>
+	    <h3 class="exp-title"> Certified LabView Associate Developer </h3>
+	    <h4 class="exp-institute"> National Instruments </h4>
+	    <h5 class="exp-location"> Austin, Tx, U.S. </h5>
+	  </div>
+	  <div class="exp-content">
+	    <p> As a demand of research, I took a three-month on-campus training course of LabView from <em> National Instruments </em> (NI). With plenty of hands on problems solving practice and data analyze training, I passed the official exam from NI and become a <em> Certified LabView Associate Developer </em>. 
+	  </div>
+	</div>
+
+	
+
+	<!-- PhD candidate -->
+	<div class="exp-subrow">
+	  <div class="dot"> </div>
+	  <div class="exp-entry">
+	    <div class="exp-time"> 2016.10 </div>
+	    <h3 class="exp-title"> Ph.D. Candidate </h3>
+	    <h4 class="exp-institute"> University of Texas at Austin </h4>
+	    <h5 class="exp-location"> Austin, TX, U.S. </h5>
+	  </div>
+	  <div class="exp-content">
+	    <p> I gave a one-hour-long research presentation passed the Ph.D. candidate oral exam in the Department of Physics. During the presentation, the presenter was challenged by audience as well as five committee members, specificly he/she has to pass the Q & A session of the commettee with solid physics research background. My presentation can be found here(<b> link to be added </b>).
+	  </div>
+	</div>
+      
+
+	<!-- Teaching Assistant -->
+	<div class="exp-subrow">
+	  <div class="dot"> </div>
+	  <div class="exp-entry">
+	    <div class="exp-time"> 2014 - 2015 </div>
+	    <h3 class="exp-title"> Teaching Assistant </h3>
+	    <h4 class="exp-institute"> University of Texas at Austin </h4>
+	    <h5 class="exp-location"> Austin, TX, U.S. </h5>
+	  </div>
+	  <div class="exp-content">
+	    <p> I was working as a teaching assistant in Deptart of Physics, for three undergraduate lab sessions. My job is to prepare a 20 min lecture, 20 min experiment demo for every session during the class, answering students' questions and solving their problems, and design finals. I had over 100 students in total. </p>
+	  </div>
+	</div>
+      </div> <!-- close col-right -->
+    </div> <!-- close Experience subpage -->
+      
+    <!-- Education -->
+    <div class="row education">
+      <div class="col-left">
+	<h2> Education </h2>
+	<p> Lazy isn't in my vocabulary. </p>
+      </div>
+      <div class="col-right">
+	<!-- UT Austin -->
+	<div class="edu-subrow">
+	  <div class="dot"> </div>
+	  <div class="edu-entry">
+	    <div class="edu-time"> 2014.08 - Present </div>
+	    <h3 class="edu-school"> University of Texas at Austin </h3>
+	    <h4 class="edu-status"> Ph.D. in Physics </h4>
+	    <h5 class="edu-location"> Austin, TX, U.S. </h5>
+	  </div>
+	  <div class="edu-content">
+	    <p> My Ph.D. work is mainly in Atomic, Molecular and Optical (AMO) Physics. Specifically, an alternative way of cooling atoms towards large Bose-Einstein Condensate is proposed ans is now being testing through our experiment. Skills involved in my research are: optics, vacuum system, lasers, experiment control, data acquisation and analyzation, time series signal generation, lasers, machining skill, CAD design, physics simulation, etc. </p> 
+	  </div>
+	</div>
+	<!-- U Heideberg -->
+	<div class="edu-subrow">
+	  <div class="dot"> </div>
+	  <div class="edu-entry">
+	    <div class="edu-time"> 2014.02 - 2014.05 </div>
+	    <h3 class="edu-school"> Universität Heidelberg </h3>
+	    <h4 class="edu-status"> Exchange Bachelor Student </h4>
+	    <h5 class="edu-location"> Heidelberg, Germany </h5>
+	  </div>
+	  <div class="edu-content">
+	    <p> As exchange student supported by <em> China Scholarship Council </em>, I got chance to finish my undergraduate in Prof. Matthias Weidemüller's group, working on <em> Quantum Dynamics and of Atomic and Molecular Systems </em>, where I found my interest in experimental atomic physics. My work here is doing imaging processing of atomic clouds, data analyzing and fitting to theoritical prediction. Rydberg Rubidium atoms was used in this experiment. </p> 
+	  </div>
+	</div>
+
+	<!-- USTC -->
+	<div class="edu-subrow">
+	  <div class="dot"> </div>
+	  <div class="edu-entry">
+	    <div class="edu-time"> 2010.08 - 2014.02 </div>
+	    <h3 class="edu-school"> University of Science and Technology of China </h3>
+	    <h4 class="edu-status"> Bachelor in Physics</h4>
+	    <h5 class="edu-location"> Hefei, Anhui, China </h5>
+	  </div>
+	  <div class="edu-content">
+	    <p> University of Science and Technology of China (USTC) is the best university famous for its physics major, I choose USTC for my childhood dream of becoming a physicist. Here I received intensive theoritical training of advanced physics and my early exposure to experimental quantum physics. What I've learned here supports me further persuing higher level research in physics. </p>
+	  </div>
+	</div>
+	
+      </div> <!-- close col-right -->
+    </div> <!-- close education subpage -->
+
+    <div class="row posts">
+      <div class="col-left">
+	<h2>  Posts </h2>
+	<p> Recent blog highlights </p>
+      </div>
+      <div class="col-right">
+	<ul>
+	  {% for post in recentPostsInfo %}
+	  <li> <div class="title-region"> <a href={{ "/blog/" + post[0].replace(':', '_').replace(' ', '_').replace('__','_').lower() }}> <em> {{ post[0] }} </em> </a></div> <div class="info-region">   #{{post[1] }} |  {{ post[2] }} </div> </li> 
+	  {% endfor %}
+	</ul>
+      </div>
+    </div>
+    
+
+    {% include "global-footer.html" %}
+  </body>
+</html>
+
