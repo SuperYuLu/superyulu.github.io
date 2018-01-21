@@ -1,0 +1,368 @@
+/*home.css --- 
+;; 
+;; Filename: home.css
+;; Description: 
+;; 
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Wed Dec 13 21:55:16 2017 (-0600)
+;; Version: 
+;; Last-Updated: Sun Jan 21 16:54:56 2018 (-0600)
+;;           By: yulu
+;;     Update #: 737
+;; 
+*/
+
+/*--------
+GENERAL
+---------*/
+
+:root{
+    --main-color: #21376B;
+    --screen-width: 100vw;
+    --screen-height: 100vh;
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    margin: 0 0;
+    padding: 0 0;
+    font-size: calc(0.01 * var(--screen-width));
+    font-family: Geneva, Tahoma, sans-serif;
+}
+
+
+a,
+a :link{
+    color: inherit;
+    text-decoration: none;
+}
+
+a :active, 
+a :visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+.block-row{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    margin: 0 0;
+    padding: 2rem 0;
+    
+}
+
+.block-col{
+    flex: 1 1 initial;
+    margin: 0 0;
+    padding: 0 0;
+    
+}
+
+/* follow icons
+---------------*/
+
+
+.icons li:hover{
+    transform: scale(1.2, 1.2);
+}
+
+
+
+
+/*------
+Splash
+------*/
+
+.splash{
+    width: 100%;
+    background-color: #2E2929;
+}
+
+.splash>:first-child{
+    flex: 1 1 initial;
+    order: 1;
+}
+
+.splash>:nth-child(2){
+    flex: 1 1 auto;
+    order: 2;
+    color: white;
+    display:flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.splash>:first-child img{
+    max-width: calc(0.5*var(--screen-width));
+    max-height: calc(0.90*var(--screen-height));
+    padding-left: calc(0.02*var(--screen-height));
+    margin: 0 0;
+    border: 0 0;
+}
+
+.intro p{
+    display: block;
+    line-height: 0.3rem;
+    width: 60%;
+    font-size: 1.6rem;
+    flex: 1 1 content;
+    
+}
+
+.intro p:nth-child(odd){
+    text-align:left;
+}
+
+.intro p:nth-child(even){
+    text-align: right;
+}
+
+.icons{
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
+    margin: 0 0;
+    
+}
+
+
+.icons li{
+    display: inline-block;
+    margin: 0 0.5vw;
+    text-decoration: none;
+}
+
+.icons img{
+    max-width: calc(0.02 * var(--screen-width));
+    height: auto;
+}
+
+/*----
+UT
+-----*/
+
+.UT{
+    
+    flex-flow: row-reverse;
+    background: #ffb23f;
+}
+
+.UT>first-child{ /* the UT image */
+    flex: 1 1 50%;
+    
+}
+
+.UT>:nth-child(2){ /* the words */
+    flex: 1 1 50%;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding: 2% 2%;
+}
+
+.UT img{
+    max-width: calc(0.45*var(--screen-width));
+    padding: calc(0.05*var(--screen-width));
+    height: auto;
+}
+
+.UT p{
+    display: inline-block;
+    margin: 1% 5%;
+}
+
+/*-------
+Research
+--------*/
+.research{
+    background: #EAA0A7;
+}
+
+.research>:first-child{
+    flex: 1 1 50%;
+    margin: auto;
+    padding: auto;
+}
+
+.research>:nth-child(2){
+    flex: 1 1 50%;
+    padding: 5% 5%;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.research img{
+    display: block;
+    margin: auto;
+    max-width: calc(0.15*var(--screen-width));
+    padding: calc(0.01*var(--screen-width));
+}
+
+
+/*------
+SKILLS
+------*/
+
+.skills{
+    background: #51abe2;
+    line-height: 2rem;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.skills>:first-child{
+    flex: 1 1 auto;
+    color: black;
+}
+
+.skills>:nth-child(2){
+    flex: 1 1 70%;
+    
+}
+
+.skills h2{
+    display: block;
+    font-size: 2.5rem;
+}
+
+.skills ul{
+    list-style: none;
+}
+
+.skills li{
+    display: block;
+}
+
+.skills ul>:nth-child(3n+1){
+    padding-left: 40%;
+}
+
+
+.skills ul>:nth-child(3n-1){
+    padding-right: 60%;
+    
+}
+
+/*-----------
+Recent blogs
+------------*/
+.blog{
+    background: #DCBAEF;
+    min-height: calc(0.6*var(--screen-height));
+}
+
+.blog h2{
+    display: inline-block;
+    margin: 2rem 4rem;
+}
+
+.blog>:first-child{
+    flex: 1 2 20%;
+    font-size: 1.4rem;
+}
+
+
+.blog>:nth-child(2){
+    flex: 2 1  auto;
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.blog em{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: black
+}
+.blog ul{
+    list-style: none;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.blog li{
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+    
+.blog .title-region{
+    display: inline-block;
+    margin: 0 3rem;
+}
+
+.blog .info-region{
+    display: inline-block;
+    margin: 0 3rem;
+}
+
+/*-----
+INTERESTS
+------*/
+.interests{
+    height:90vh;
+    background: #442344;
+}
+
+.interestss>:first-child{
+    background: #222344;
+    width: 50%;
+}
+
+.interests>:nth-child(2){
+    background: #483482;
+    width: 50%;
+}
+
+
+/*-----
+Footer
+------*/
+.footer{
+    background-color: #292929;
+    line-height: 2rem;
+    padding: 4rem 0 0 0;
+    color: white;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+
+
+.footer>:first-child{
+    flex: 1;
+    margin: 5%;
+}
+
+.footer>:nth-child(2){
+    flex: 1;
+}
+
+.footer>:nth-child(3){
+    flex: 1;
+    margin: 5%;
+}
+
+.footer .copy{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer .copy p{
+    margin: 4rem 0 0.5rem 0;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-top: 0.05rem solid gray;
+}

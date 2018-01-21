@@ -1,0 +1,327 @@
+/*resume.css --- 
+;; 
+;; Filename: resume.css
+;; Description: 
+;; 
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sat Jan 20 16:43:09 2018 (-0600)
+;; Version: 
+;; Last-Updated: Sun Jan 21 17:08:26 2018 (-0600)
+;;           By: yulu
+;;     Update #: 284
+;; 
+*/
+
+/*------
+ General
+-------*/
+
+:root{
+    --color-gray1: #FBFBFB;
+    --color-gray2: #F8F8F8;
+    --color-gray3: #FFFFFF;
+    --color-gray4: #FCFCFC;
+    --color-gray-line: #ECECEC;
+    --color-highlight: #4A60B9;
+    --screen-width: 100vw;
+    --screen-height: 100vh;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+html{
+    background: white;
+    color: black;
+    font-size: calc(0.01 * var(--screen-width));
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    
+}
+
+
+.row{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+.col-left{
+    width: 30%;
+    padding: 2rem 2rem 2rem calc(0.1*var(--screen-width));
+    text-align: right;
+}
+
+.col-right{
+    width: 70%;
+    padding: 2rem calc(0.1*var(--screen-width)) 2rem 2rem;
+}
+
+
+/*-----
+Splash
+------*/
+.splash{
+    min-height: calc(0.8*var(--screen-height));
+}
+
+.splash .col-left{
+    background-color: var(--color-gray1);
+}
+
+.splash .col-right{
+    background-color: var(--color-gray3);
+}
+
+.splash .header{
+    position: absolute;
+    top: 0;
+}
+.cover-pic img{
+    max-width: 50%;
+    border-radius: 50%;
+    margin-top: calc(0.3*var(--screen-height));
+    margin-left: 40%;
+}
+
+.splash h1{
+    margin: calc(0.3*var(--screen-height)) 0 0 5%;
+    font-size: 4rem;
+}
+
+.splash p{
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 2rem 5% 0 5%;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid black;
+}
+
+.splash .checkout-blog{
+    margin: 0.5rem 5% 0 5%;
+}
+
+.splash .checkout-blog a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--color-highlight);
+}
+
+.splash .checkout-blog a:hover{
+    transform: scale(1.2, 1.2);
+}
+
+
+.splash nav{
+    list-style: none;
+}
+
+.splash li{
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.splash li img{
+    max-width: 2rem;
+}
+
+.splash li:hover{
+    transform: scale(1.2, 1.2);
+}
+
+/*----
+Intro
+-----*/
+
+
+.intro .col-left{
+    Background-Color: Var(--color-gray2);
+
+}
+
+.intro .col-right{
+    background-color: var(--color-gray4);
+}
+
+
+/*-----
+Skills
+-----*/
+.skills .col-left{
+    background-color: var(--color-gray1);
+}
+
+.skills .col-right{
+    background-color: var(--color-gray3);
+}
+
+.skills ul{
+    list-style: none;
+    line-height: 1rem;
+    
+}
+
+.skills li{
+    display: block;
+    font-size: 1rem;
+}
+
+.skills ul>:nth-child(4n){
+    margin: 0.1rem 5%;
+}
+
+.skills ul>:nth-child(4n+1){
+    margin: 0.3rem 80%;
+}
+
+
+.skills ul>:nth-child(4n+2){
+    margin: 0.2rem  60%;
+    
+}
+
+.skills ul>:nth-child(4n+3){
+    margin: 0.3rem  30%;
+    
+}
+
+.size4{font-size: 2.5rem;}
+.size3{font-size: 1.7rem;}
+.size2{font-size: 1.5rem;}
+.size1{font-size: 1rem;}
+
+
+/*--------------------
+Experience & Education 
+----------------------*/
+.experience .col-left{
+    background-color: var(--color-gray2);
+    padding-bottom: 0;
+}
+
+.experience .col-right{
+    background-color: var(--color-gray4);
+    padding-bottom: 0;
+}
+
+.exp-subrow,
+.edu-subrow{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.dot{
+    background: var(--color-highlight);
+    width: 2rem;
+    height: 2rem;
+    border: 0.6rem solid var(--color-gray4);
+    border-radius: 50%;
+    position: relative;
+    left: 1rem;
+    top: 1rem;
+}
+.exp-entry,
+.edu-entry{
+    flex: 1 30%;
+    line-height:120%;
+    text-align: left;
+    margin-top: 1rem;
+    padding: 0 2rem 0 1rem;
+    border-left: 0.3rem solid var(--color-gray-line);
+    }
+
+.exp-content,
+.edu-content{
+    flex: 1 60%;
+}
+
+.exp-time,
+.edu-time{
+    font-size: 0.6rem;
+    opacity: 0.5;
+}
+.exp-title,
+.edu-school{
+    font-weight: 500;
+}
+
+.exp-institute,
+.edu-status{
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.exp-location,
+.edu-location{
+    font-size: 0.6rem;
+    opacity: 0.5;
+}
+
+/*-------
+Education
+--------*/
+
+.education .col-left{
+    background-color: var(--color-gray1);
+    padding-top: 0;
+}
+
+.education .col-right{
+    background-color: var(--color-gray3);
+    padding-top: 0;
+}
+
+.education .dot{
+        border: 0.6rem solid var(--color-gray3);
+}
+
+/*----
+Posts
+-----*/
+.posts .col-left{
+    background-color: var(--color-gray2);
+}
+
+.posts .col-right{
+    background-color: var(--color-gray4);
+}
+
+
+.posts{
+    min-height: calc(0.5*var(--screen-height));
+}
+
+
+.posts em{
+    font-size: 1.2rem;
+    text-decoration: underline;
+    color: black
+}
+.posts ul{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.posts li{
+    display: inline-block;
+    margin: 0.5rem 0;
+    
+}
+    
+.posts .title-region{
+    display: inline-block;
+    margin: 0 3rem;
+}
+
+.posts .info-region{
+    display: inline-block;
+    margin: 0 3rem;
+}
+
