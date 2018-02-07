@@ -9,9 +9,9 @@
 ;; 
 ;; Created: Sat Jan 20 16:43:09 2018 (-0600)
 ;; Version: 
-;; Last-Updated: Sun Jan 21 17:08:26 2018 (-0600)
+;; Last-Updated: Tue Feb  6 23:24:50 2018 (-0600)
 ;;           By: yulu
-;;     Update #: 284
+;;     Update #: 286
 ;; 
 */
 
@@ -153,6 +153,12 @@ Intro
 /*-----
 Skills
 -----*/
+.skills img{
+    width: 100%;
+    height: auto;
+}
+
+/*--- HTML implementation
 .skills .col-left{
     background-color: var(--color-gray1);
 }
@@ -195,7 +201,7 @@ Skills
 .size3{font-size: 1.7rem;}
 .size2{font-size: 1.5rem;}
 .size1{font-size: 1rem;}
-
+---*/
 
 /*--------------------
 Experience & Education 
