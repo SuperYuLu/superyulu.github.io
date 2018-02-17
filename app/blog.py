@@ -9,9 +9,9 @@
 # 
 # Created: Wed Dec 20 22:31:26 2017 (-0600)
 # Version: 
-# Last-Updated: Sat Jan 20 13:53:47 2018 (-0600)
+# Last-Updated: Fri Feb 16 23:18:49 2018 (-0600)
 #           By: yulu
-#     Update #: 82
+#     Update #: 84
 # 
 
 from app import app
@@ -28,7 +28,7 @@ def countCategory():
 @app.route('/blog/')
 def posts():
     posts = [p for p in flatpages] 
-    posts.sort(key = lambda item: item['date'], reverse = False)
+    posts.sort(key = lambda item: item['date'], reverse = True)
     categoryStats = countCategory()
     return render_template('blog.html', posts = posts, categoryStats = categoryStats)
 
@@ -39,7 +39,7 @@ def post(name):
     post = flatpages.get_or_404(path)
 
     posts = [p for p in flatpages] 
-    posts.sort(key = lambda item: item['date'], reverse = False)
+    posts.sort(key = lambda item: item['date'], reverse = True)
     categoryStats = countCategory()
     
     return render_template('post.html', post = post, posts = posts, categoryStats = categoryStats)
