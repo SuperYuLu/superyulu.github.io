@@ -9,9 +9,9 @@
 ;; 
 ;; Created: Fri Dec 22 22:12:33 2017 (-0600)
 ;; Version: 
-;; Last-Updated: Sun Jan 21 15:50:46 2018 (-0600)
+;; Last-Updated: Fri Feb 16 23:43:03 2018 (-0600)
 ;;           By: yulu
-;;     Update #: 116
+;;     Update #: 117
 ;; 
 */
 
@@ -67,6 +67,9 @@ a :visited {
     padding-top: 5%;
 }
 
+.content a:hover{
+    color: #6b3089;
+}
 
 .post-container{
     flex: 1 1 60%;

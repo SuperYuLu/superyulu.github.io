@@ -9,9 +9,9 @@
 ;; 
 ;; Created: Sun Dec 24 18:09:49 2017 (-0600)
 ;; Version: 
-;; Last-Updated: Sat Feb  3 14:30:47 2018 (-0600)
+;; Last-Updated: Fri Feb 16 23:39:27 2018 (-0600)
 ;;           By: yulu
-;;     Update #: 135
+;;     Update #: 143
 ;; 
 */
 
@@ -73,6 +73,19 @@ Layout
     flex: 1 1 25%;
     margin: 0 2%;
 }
+
+.side a,
+.markdown a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-highlight);
+}
+
+.side a:hover,
+.markdown a:hover{
+    text-decoration: underline;
+}
+    
 
 /*----
 Title 
