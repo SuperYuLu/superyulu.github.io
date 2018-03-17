@@ -1,0 +1,212 @@
+<!-- post.html --- 
+;; 
+;; Filename: post.html
+;; Description: 
+;;            blog post page frame, content from Markdown files
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Fri Dec 22 18:03:11 2017 (-0600)
+;; Version: 
+;; Last-Updated: Sat Mar  3 13:14:04 2018 (-0600)
+;;           By: yulu
+;;     Update #: 61
+;; 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- global-head.html --- 
+;; 
+;; Filename: global-head.html
+;; Description: 
+;;            Global head setting
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sat Dec 16 17:30:48 2017 (-0600)
+;; Version: 
+;; Last-Updated: Sun Dec 24 20:59:35 2017 (-0600)
+;;           By: yulu
+;;     Update #: 4
+;; 
+  -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/css/normalize.css" >
+    <link rel="stylesheet" href="/static/css/post.css">
+    <link rel="stylesheet" href="/static/css/nav-bar.css" >
+    <link rel="stylesheet" href="/static/css/footer.css" >
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    <title> Yu Lu - Blog </title>
+  </head>
+
+  <body>
+    <!-- global-nav-bar.html --- 
+;; 
+;; Filename: global-nav-bar.html
+;; Description: 
+;;            Navigation bar used acrossed web
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sun Dec 24 12:19:25 2017 (-0600)
+;; Version: 
+;; Last-Updated: Mon Jan 22 18:50:55 2018 (-0600)
+;;           By: yulu
+;;     Update #: 11
+;; 
+  -->
+
+<div class="header">
+  <ul>
+    <li> <a href="/"> Home </a></li>
+    <li> <a href="/blog/"> Blog </a></li>
+    <li> <a href="/contact/"> Contact </a> </li>
+  </ul>
+</div>
+    <div class="content">
+      
+      <div class="markdown">
+
+	<div class="metadata">
+	  <p> 2018-03-17 | 14:04 | Linux </p>
+	</div>
+
+	<h1>Manage Python Packages on Arch Linux</h1>
+<p><img alt="cover" src="/static/posts/manage_python_packages_on_arch_linux/cover.png" />  </p>
+<h2>Pacman and Pip</h2>
+<p>While python is one of the most popular programming language, installing/managing python pacakges could have the risk of package confliction. Pacman, as the pacakge manager on arch linux, tracks packages installed or build through pacman (or related complimentary method like yaourt) and helps to resolve their dependencies as well as keep them update.   </p>
+<p>Although a great number of Python packages are readily available in the official repositories and the AUR, it doesn't mean that you could always find what you want from pacman. The Python ecosystem provides its own package managers for use with PyPI, which can be installed through pip. So what should be the preffered way to intall python packages on arch linux ? Arch wiki tells you:  </p>
+<blockquote>
+<p>"It is always preferred to use pacman to install software".   </p>
+</blockquote>
+<p>But what if one has to use pip for packages not on arch repos ?  </p>
+<h2>The Error</h2>
+<p>A few month ago I started using python flask package as backend to build dynaic website, since flask will be used frequently on my laptop (with arch linux installed) I decided not to use virtual environment. As always the preference, I first tried to use pacman to query flask from the remote repositories, I got nothing.  </p>
+<p>Well, pip is next tool which I was certain that I could find flask package. Here the mistake starts:  </p>
+<p><code>sudo pip install flask</code>  </p>
+<p>Here I used sudo on top of pip to install python packages, which will install python packages in: <code>/usr/lib/python3.6/site-packages</code> directory. It takes only a few seconds compare to looking for packages and build through pacman. Easy!   </p>
+<p>However, a few weeks later, when I was doing a regular system update by typing <code>sudo pacman -Syu</code>, the error comes:  </p>
+<p><code>Pacman "error: failed to commit transaction (conflicting files)"</code>  </p>
+<p>With which there was a long list "already exists"  packages in the system site-package path. What's going on ?  </p>
+<h2>The Failling Point</h2>
+<p>The main reason of this error is that, I was using pip to install python packages system-wide, using sudo. when installing pacman packages which depend on previously installed packages from pip, the later update may fail, since pacman is trying to update packages not documented but turned out these packages already exist in the system.  </p>
+<p>This is a general mistake people could make, not restricted to python packages. As every system-wide package you install is build on top of the core arch linux, using third-party package installer will potentially rise confliction. The take-home massage from this lesson is:  </p>
+<blockquote>
+<p>Be careful when installing packages system-wide if not through pacman.  </p>
+</blockquote>
+<h2>The correct approach</h2>
+<p>As mentioned above, the mistake has two aspects: 1) not using pacman; 2) system-wide installation. The correct approaches can also come correspondingly.  </p>
+<h3>Build through pacman</h3>
+<p>The chance always exists that you have to install some python packages that could not be find through pacman query, such as: flask, frozen-flask, watermark, etc. The general approach is to build from source through pacman build, or if one prefer, can try query yaourt. This keep the package managed by pacman and resolves the dependency and potentially can avoid future conflitions. <br />
+The downside is that this may be time-consuming, and could require more unnecessary packages to build the targeted package you want. This doen't come very handy especially when one what to just get the package ready and enjoy the python joy.  </p>
+<h3>Install for user only</h3>
+<p>This another way to resolve the confliction, since packages installed only for specific user won't have potential problem with pacman system-wide update. To do this, simply running:   </p>
+<p><code>pip install package-name --user</code>  </p>
+<p>Make sure to use the <code>--user</code> option, otherwise pip by default will try to install the packages system-wide, to <code>/usr/lib/python3.6/site-packages</code> and usually will give "permission denied" error during the installation step. Note that one has to be loged in as the end useer and no sudo needed.  </p>
+<h2>Python packages</h2>
+<p>I had problem to let python find the packages installed for end users, which appears to be <code>no module named package-name</code> error when trying import user site packages. So here are a few more works about how python find its packages.  </p>
+<p>Similar to pacman, python has its specific system path to search for packages. By default, python search path  <code>/usr/lib/python3.6/site-packages</code> for system-wide install packages. One can use <code>python -m site</code> in command line to list the system path, for example :<br />
+<img alt="pic" src="/static/posts/manage_python_packages_on_arch_linux/pythonsite.jpg" />  </p>
+<p>As one can see there are four categories: <br />
+- sys.path: This is a list of system path the python searches for packages <br />
+- USER_BASE: This is where user specific python configuration/package path<br />
+- USER_SITE: The path where user site-packages are installed, when using <code>pip install package-name --user</code><br />
+- ENABLE_USER_SITE: whether the user site package is enabled.  </p>
+<p>Usually when one choose to install python packages user-specificly, the installed packages should located in the path given by <code>USER_SITE</code>. To view what packages has been install for user, one can either check the above directory or use <code>pip list</code>.  </p>
+<p>Another way to check where python looks for packages is to use sys module in a python environment:<br />
+<img alt="pics" src="/static/posts/manage_python_packages_on_arch_linux/pythonsite2.jpg" />  </p>
+<p>Onthing one has to pay attention is that, having "USER_SITE" listed the user site-package path doesn't necessary garantee python will find this packaged installed there. The installed packages has to be under one of the paths listed under "sys.path".   </p>
+<p>If your user site-packages path does not appear in "sys.path" list, one can try to assign it to the environment variable "PYTHONPATH" in bash, pratically in .bashrc, add:  </p>
+<p><code>export PYTHONPATH=path_to_user_local_site_packages</code></p>
+<p>One can double check if the user site-package path has been successfully added to the "sys.path" by one of two ways introduced above.  </p>
+      </div>
+
+      <div class="side">
+	<h3> New posts </h3>
+	<ul>
+	  
+	  <li> <a href="/blog/manage_python_packages_on_arch_linux/">Manage Python Packages on Arch Linux </a> </li>
+	  
+	  <li> <a href="/blog/citadel_the_data_open_datathon/">Citadel The Data Open Datathon </a> </li>
+	  
+	  <li> <a href="/blog/saipan_paradise_in_the_pacific/">Saipan: Paradise in the Pacific </a> </li>
+	  
+	</ul>
+	<h3> Categories </h3>
+	<ul>
+	  
+	  <li> travel (1) </li>
+	  
+	  <li> activities (1) </li>
+	  
+	  <li> Linux (1) </li>
+	  
+	</ul>
+	
+      </div>
+    </div>
+    <!-- global-footer.html --- 
+;; 
+;; Filename: global-footer.html
+;; Description: 
+;;            footer for using across the web site 
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sun Jan 21 15:09:11 2018 (-0600)
+;; Version: 
+;; Last-Updated: Sat Jan 27 09:50:47 2018 (-0600)
+;;           By: yulu
+;;     Update #: 14
+;; 
+  -->
+
+<!--footer page -->
+<div class="footer-row footer">
+  
+  <div class="footer-column">
+    <h3> Site </h3>
+    <ul>
+      <li> <a href="/"> Home </a> </li>
+      <li> <a href="/blog"> Blog </a> </li>
+      <li> <a href="/contact"> Contact </a> </li>
+    </ul>
+  </div>
+  
+  <div class="footer-column">
+    <h3> Build </h3>
+    <ul>
+      <li> HTML5 / CSS3 </li>
+      <li> Python3 / Markdown </li>
+      <li> Flask / Frozen-Flask / Flask-FlatPages  </li>
+    </ul>
+  </div>
+  
+  <div class="block-column">
+    <h3> Develop </h3>
+    <ul>
+      <li> Hosted on: Github Pages </li>
+      <li> Source code: <a href="https://github.com/SuperYuLu/NewHomePage"> Github </a> </li>
+    </ul>
+  </div>
+
+  <div class="copy">
+    <div class="claim-static">  Static Pages Generated From Original Dynamic Web Design For Hosting on Github Pages</div>
+    <p> All rights reserved &copy 2018 </p>
+  </div>
+  
+  
+</div>
+  </body>
+
+</html>
