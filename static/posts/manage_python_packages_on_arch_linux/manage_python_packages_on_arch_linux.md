@@ -5,11 +5,11 @@ location:    Austin, TX
 country:    United States  
 author:    Yu Lu  
 category:    Linux  
-cover:    cover.png  
+cover:    cover.jpg  
 abstract:  Python package management on arch linux is not trivial, due to the possible confliction between pacman package manager and the pip python package installer. This article introdues the confliction and ways to walk around this issue.  
 
 # Manage Python Packages on Arch Linux  
-![cover](/static/posts/manage_python_packages_on_arch_linux/cover.png)  
+![cover](/static/posts/manage_python_packages_on_arch_linux/cover.jpg)  
 
 ## Pacman and Pip  
 While python is one of the most popular programming language, installing/managing python pacakges could have the risk of package confliction. Pacman, as the pacakge manager on arch linux, tracks packages installed or build through pacman (or related complimentary method like yaourt) and helps to resolve their dependencies as well as keep them update.   
