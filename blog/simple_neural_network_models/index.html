@@ -1,0 +1,212 @@
+<!-- post.html --- 
+;; 
+;; Filename: post.html
+;; Description: 
+;;            blog post page frame, content from Markdown files
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Fri Dec 22 18:03:11 2017 (-0600)
+;; Version: 
+;; Last-Updated: Sat Mar  3 13:14:04 2018 (-0600)
+;;           By: yulu
+;;     Update #: 61
+;; 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- global-head.html --- 
+;; 
+;; Filename: global-head.html
+;; Description: 
+;;            Global head setting
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sat Dec 16 17:30:48 2017 (-0600)
+;; Version: 
+;; Last-Updated: Sun Dec 24 20:59:35 2017 (-0600)
+;;           By: yulu
+;;     Update #: 4
+;; 
+  -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/css/normalize.css" >
+    <link rel="stylesheet" href="/static/css/post.css">
+    <link rel="stylesheet" href="/static/css/nav-bar.css" >
+    <link rel="stylesheet" href="/static/css/footer.css" >
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    <title> Yu Lu - Blog </title>
+  </head>
+
+  <body>
+    <!-- global-nav-bar.html --- 
+;; 
+;; Filename: global-nav-bar.html
+;; Description: 
+;;            Navigation bar used acrossed web
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sun Dec 24 12:19:25 2017 (-0600)
+;; Version: 
+;; Last-Updated: Mon Jan 22 18:50:55 2018 (-0600)
+;;           By: yulu
+;;     Update #: 11
+;; 
+  -->
+
+<div class="header">
+  <ul>
+    <li> <a href="/"> Home </a></li>
+    <li> <a href="/blog/"> Blog </a></li>
+    <li> <a href="/contact/"> Contact </a> </li>
+  </ul>
+</div>
+    <div class="content">
+      
+      <div class="markdown">
+
+	<div class="metadata">
+	  <p> 2018-11-11 | 11:26 | Machine Learning </p>
+	</div>
+
+	<h1>Simple Neural Network Models</h1>
+<p><img alt="cover" src="/static/posts/simple_neural_network_models/cover.jpg" />  </p>
+<h2>Belief(Bayesian) Network</h2>
+<p><img alt="SimpleBayesNetNodes" src="/static/posts/simple_neural_network_models/SimpleBayesNetNodes.svg" /></p>
+<ul>
+<li>Probablistic graphic model represents variables and their conditional dependencies </li>
+<li>Representation: directed acyclic graph(DAG)</li>
+<li>Nodes: observable quantities or latent variables </li>
+<li>Application: inferring latent variables, parameter learning, structure learning</li>
+</ul>
+<h2>Markov Ranodm Field(MRF)</h2>
+<p><img alt="Markov_random_field_example" src="/static/posts/simple_neural_network_models/Markov_random_field_example.png" /></p>
+<ul>
+<li>Random variables with having a Markov property described by undirected graph </li>
+<li>Representation: similar to Baysian Network, MRF is represented by  undirected graph G(V, E), may be cyclic.</li>
+<li>Properties: pairwise, local and global Markov property</li>
+<li>Application: computer vision, machine learning</li>
+</ul>
+<h2>Hopfield Network(1974)</h2>
+<p><img alt="Hopfield-net" src="/static/posts/simple_neural_network_models/Hopfield-net.png" /></p>
+<ul>
+<li>A form a recurrent artificial neural network (RNN)  </li>
+<li>Units: binary threshold units, e.g. 1, -1 </li>
+<li>Connection: compelete undirected graph G = <V, f> with weight \( w_{i,j} \)</li>
+<li>Energy: \( E = -\frac{1}{2}\sum_{i,j} w_{i,j} s_i s_j  + \sum_i \theta_i s_i \), s: state of unit, w: connection weight, \( \theta \): threshold</li>
+<li>\( s_i = +1 \) if \( \sum_j w_{i,j}s_j \geq \theta_i \), otherwise \( s_i = -1 \)</li>
+<li>Physics analog: Ising model </li>
+</ul>
+<h2>Boltzmann Machine</h2>
+<p><img alt="Boltzmannexample" src="/static/posts/simple_neural_network_models/Boltzmannexample.png" /></p>
+<ul>
+<li>A form a recurrent artificial neural network (RNN)  </li>
+<li>A generative, stochastic counter part of Hopfield Network</li>
+<li>Energy: \( E = -(\frac{1}{2}\sum_{i,j} w_{i,j} s_i s_j  + \sum_i \theta_i s_i) \), </li>
+<li>s: state of unit, w: connection weight, \( \theta \): threshold</li>
+<li>Application: with unconstrained connectivity, has no proven useful application for practical problems</li>
+</ul>
+<h2>Restricted Boltzmann Machine(RBM, 1986)</h2>
+<p><img alt="Restricted_Boltzmann_machine" src="/static/posts/simple_neural_network_models/Restricted_Boltzmann_machine.png" /></p>
+<ul>
+<li>Variant of Boltzmann Machine </li>
+<li>No inter connections between neurons on the same layer </li>
+<li>Energy: \( E(v,h) = -\sum_i a_i v_i - \sum_j b_j h_j - \sum_i \sum_j v_i w_{i,j} h_j \)</li>
+<li>v: visiable units, h: hidden units, w: connection weights</li>
+<li>Application: so many... </li>
+</ul>
+      </div>
+
+      <div class="side">
+	<h3> New posts </h3>
+	<ul>
+	  
+	  <li> <a href="/blog/simple_neural_network_models/">Simple Neural Network Models </a> </li>
+	  
+	  <li> <a href="/blog/abstract_algebra_for_machine_learning/">Abstract Algebra for Machine Learning </a> </li>
+	  
+	  <li> <a href="/blog/manage_python_packages_on_arch_linux/">Manage Python Packages on Arch Linux </a> </li>
+	  
+	  <li> <a href="/blog/citadel_the_data_open_datathon/">Citadel The Data Open Datathon </a> </li>
+	  
+	</ul>
+	<h3> Categories </h3>
+	<ul>
+	  
+	  <li> activities (1) </li>
+	  
+	  <li> Machine Learning (2) </li>
+	  
+	  <li> Linux (1) </li>
+	  
+	</ul>
+	
+      </div>
+    </div>
+    <!-- global-footer.html --- 
+;; 
+;; Filename: global-footer.html
+;; Description: 
+;;            footer for using across the web site 
+;; Author:    Yu Lu
+;; Email:     yulu@utexas.edu
+;; Github:    https://github.com/SuperYuLu 
+;; 
+;; Created: Sun Jan 21 15:09:11 2018 (-0600)
+;; Version: 
+;; Last-Updated: Sat Jan 27 09:50:47 2018 (-0600)
+;;           By: yulu
+;;     Update #: 14
+;; 
+  -->
+
+<!--footer page -->
+<div class="footer-row footer">
+  
+  <div class="footer-column">
+    <h3> Site </h3>
+    <ul>
+      <li> <a href="/"> Home </a> </li>
+      <li> <a href="/blog"> Blog </a> </li>
+      <li> <a href="/contact"> Contact </a> </li>
+    </ul>
+  </div>
+  
+  <div class="footer-column">
+    <h3> Build </h3>
+    <ul>
+      <li> HTML5 / CSS3 </li>
+      <li> Python3 / Markdown </li>
+      <li> Flask / Frozen-Flask / Flask-FlatPages  </li>
+    </ul>
+  </div>
+  
+  <div class="block-column">
+    <h3> Develop </h3>
+    <ul>
+      <li> Hosted on: Github Pages </li>
+      <li> Source code: <a href="https://github.com/SuperYuLu/NewHomePage"> Github </a> </li>
+    </ul>
+  </div>
+
+  <div class="copy">
+    <div class="claim-static">  Static Pages Generated From Original Dynamic Web Design For Hosting on Github Pages</div>
+    <p> All rights reserved &copy 2018 </p>
+  </div>
+  
+  
+</div>
+  </body>
+
+</html>
