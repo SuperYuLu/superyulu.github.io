@@ -1,5 +1,5 @@
  <div align="center">
-     <h1>XXX</h1>
+     <h1>Yu Lu</h1>
      <div>
 		 <!--<span>
              <img src="assets/phone-solid.svg" width="18px">
@@ -50,7 +50,7 @@
 
 - Statistical Machine Learning on U.S. Educational Finance, 2016
 
-	Study the educational finance input of U.S. schools with machine learning methods like GBDT, Random Forest, PCA, LDA, Clustering, etc. 
+	Study the educational finance of U.S. schools with machine learning methods like GBDT, Random Forest, PCA, LDA, Clustering, etc. 
 	
 - Adiabatic Deceleration of Cold Supersonic Atoms, 2014-2016
 
@@ -63,12 +63,12 @@
 ## Develop Experience
 
 - Creator & Maintainer of Opensouce Package SciBeam (2015 - present)
-  
-	  Scientific data analyzing tool for time-series measurement, published on PYPI and publicly avaliable. 
+
+	Scientific data analyzing tool for time-series measurement, published on PYPI and publicly avaliable. 
   
 - Web Application Development (2017)
   
-	  Dynamic website with daily parsed music ranking and classification data, with python, postgreSQL as backend and hosted on Google Could. 
+    Dynamic website with daily parsed music ranking and classification data, with python, postgreSQL as backend and hosted on Google Could. 
 
 - Parallel Computing (2016 - present)
 
@@ -88,38 +88,96 @@
 + Computer Vision: OpenCV, CNN models
 
 
+ <div align="center">
+     <h1>陆昱</h1>
+     <div>
+		 <!--<span>
+             <img src="assets/phone-solid.svg" width="18px">
+             180XXXXXXXX
+         </span>
+         ·
+		 -->
+         <span>
+             <img src="assets/envelope-solid.svg" width="18px">
+             yulu@utexas.edu
+         </span>
+         ·
+         <span>
+             <img src="assets/github-brands.svg" width="18px">
+             <a href="https://github.com/SuperYuLu">SuperYuLu</a>
+         </span>
+         ·
+         <span>
+             <img src="assets/rss-solid.svg" width="18px">
+             <a href="https://superyulu.github.io/">My Website</a>
+         </span>
+     </div>
+ </div>
+
+
  ## 个人信息
 
- - 男，1994 年出生
- - 求职意向：Java 研发工程师
- - 工作经验：0 年（校招可不填）
- - 期望薪资：0k（校招可不填）
+ - 男，1992 年出生
+ - 求职类型： 海外校招 
+ - 求职状态： 积极求职中
 
 ## 教育经历
 
-- 硕士，XXXX大学，计算机科学与技术专业，2016.9~2019.7
-- 学士，XXXX大学，软件工程专业，2012.9~2016.7
+- 博士，美国德克萨斯州大学奥斯汀， 应用物理学博士，计算机辅修， 预期2019.05毕业， 2014.08-2019.05
+- 学士，中国科学技术大学, 理论及计算物理专业，2010.08~2014.0
 
-## 工作经历
+## 研究经历
 
-- XXXX 公司，XXXX 部门，XXXX 工程师，2010.1~2010.9
+- 深度卷积神经网络图像语义分割及目标检测(2017-2019)
 
-  负责 XXX
+	替代 Mask R-CNN 的无监督图像分割并应用于生物组织图像中
+  
+- 全卷积自编码器癌症组织图像监督学习(2017)
+	
+	卷积神经网络监督学习图像的Mask标注，缩短预测时间x10并保持优良精度
 
-## 项目经历
+- 基于机器学习的美国教育财政统计分析(2017)
 
-- XXXX 项目
+	应用经典机器学习及统计方法研究美国联邦教育财政投入的统计分布,聚类及回归
+	
+- 超声原子束的磁场减速和激光冷却(2014-2018)
 
-  使用一两句话描述项目的主要功能，然后介绍自己在项目中的角色，解决了什么问题，使用什么方式解决，比别人的方法相比有什么优势（尽量用数据来说明）。
+	搭建实验装置，优化，模拟，实现真空中磁场减速冷原子束流从500米/秒至20米/秒
 
-  项目地址：[CS-Notes](https://github.com/CyC2018/CS-Notes)
+- 超冷原子的非破坏成像方法(2013 - 2014)
+
+	冷原子的激光荧光成像、吸收成像、相位比较成像的理论及计算机模拟分析
+  
+
+## 开发经验
+
+- 开源项目开发及维护 (2017 - 至今)
+  
+  时间序列分析的科学计算开源软件包 SciBeam,依照 MIT 协议开源
+  
+- 网页动态应用开发 (2017)
+
+  动态网页展示实时爬虫抓取的音乐排名及分类数据, Python及PostgreSQL后端支持， 托管于谷歌云
+  
+- 超算中心并行计算 (2016 - 至今)
+
+ 超算平台TACC上的 OpenMP,MPI,C++ 的物理仿真模拟， 及基于CUDA， TensorFlow-GPU的多GPU并行神经网络训练
+  
+- Linux 系统管理 (2016 - 至今)
+  
+  搭建、管理及维护实验组网页及内部 Debian Linux 服务器
+  
+- 嵌入式系统开发 (2017)
+
+  单板电脑 Raspberry Pi 及传感器编程进行实时环境监控,实时网页交互
+
 
 ## 技能清单
 
-- ★★★ Java
-- ★★☆ C++、Python
-- ★★★ MySQL
-- ★★★ Redis
-- ★★☆ Spring
-- ★☆☆ RabbitMQ、ZooKeeper
-- ★★☆ JavaScript
++ 编程语言: Python, C++/C, Shell, MATLAB, FORTRAN, CSS/HTML
++ 工具: Git. CMake, Travis CI, Linux
++ 并行算法: OpenMP, MPI, TensorFlow multi-GPU
++ 深度学习框架: Tensorflow, CUDA, CUDNN, TensorBoard, Timeline, TFDBG
++ 机器学习框架: Scikit-learn, pandas, XGBoost
++ 计算机图像: OpenCV, CNN models
+
